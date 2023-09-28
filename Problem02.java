@@ -17,3 +17,4 @@ public class Problem02 extends Karel{
 		}
 	}
 }
+//3-7 problems
