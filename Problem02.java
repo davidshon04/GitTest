@@ -12,5 +12,8 @@ public class Problem02 extends Karel{
 		pickBeeper();
 	}
 		move();
+		for(int i=0; i<10; i++){
+			putBeeper();
+		}
 	}
 }
