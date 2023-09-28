@@ -20,9 +20,7 @@ public class KarelProgramSample extends SuperKarel {
 		pickBeeper();
 		turnLeft();
 		move();
-		turnLeft();
-		turnLeft();
-		turnLeft();
+		turnRight();
 		move();
 		putBeeper();
 		move();
