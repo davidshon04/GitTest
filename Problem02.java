@@ -8,18 +8,9 @@ public class Problem02 extends Karel{
 		for(int i=0; i<4; i++){
 		move();
 	}
-		
+		for(int i=0; i<10; i++){
 		pickBeeper();
-		pickBeeper();
-		pickBeeper();
-		pickBeeper();
-		pickBeeper();
-		pickBeeper();
-		pickBeeper();
-		pickBeeper();
-		pickBeeper();
-		pickBeeper();
-		move();	
 	}
-
+		move();
+	}
 }
