@@ -10,13 +10,12 @@ public class Problem06 extends Karel{
 		move();
 		if(beepersPresent()){
 			pickBeeper();
-			turnRight();
+			turnAround();
 			move();
 			putBeeper();
 		}
 	}
-	private void turnRight(){
-		turnLeft();
+	private void turnAround(){
 		turnLeft();
 		turnLeft();
 	}
