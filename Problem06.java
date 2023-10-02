@@ -74,7 +74,6 @@ public class Problem06 extends Karel{
 				move();
 			}
 		}
-		move();
 		}
 	private void turnAround(){
 		turnLeft();
