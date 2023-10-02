@@ -9,6 +9,7 @@ import stanford.karel.Karel;
 public class Problem07 extends Karel {
 	
 	public void run(){
+		while(frontIsClear()){
 //ვავსებ პირველ ქუჩას ბრილიანტებით:
 		while(frontIsClear()){
 			if(beepersPresent()){
@@ -40,8 +41,14 @@ public class Problem07 extends Karel {
 			if(noBeepersPresent()){
 				putBeeper();
 			}
-//ავავსე მეორე ქუჩაც.
+//ავავსე მეორე ქუჩაც. ახლა ვუხვევ მარჯვნივ:
+		}
+		for(int i=0; i<3; i++){
+			turnLeft();
+		}
+		
 		}
 	}
-	
 }
+	
+
