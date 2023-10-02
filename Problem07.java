@@ -60,5 +60,6 @@ public class Problem07 extends Karel {
 		}
 	}
 }
+//ვასწავლე სამი ქუჩის გავლა და ვსვამ ციკლში.
 	
 
