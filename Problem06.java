@@ -7,8 +7,15 @@ import stanford.karel.Karel;
 public class Problem06 extends Karel{
 	
 	public void run(){
-			move();
-			
+			for(int i=0; i<3; i++){
+				move();
+			}
+			for(int i=0; i<5; i++){
+				putBeeper();
+			}
+			for(int i=0; i<4; i++){
+				putBeeper();
+			}
 		}
 	}
 
