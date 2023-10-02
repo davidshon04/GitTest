@@ -8,12 +8,16 @@ public class Problem06 extends Karel{
 	
 	public void run(){
 		move();
+		while(beepersPresent()){
 		if(beepersPresent()){
 			pickBeeper();
 			turnAround();
 			move();
 			putBeeper();
+			turnAround();
+			move();
 		}
+	}
 	}
 	private void turnAround(){
 		turnLeft();
