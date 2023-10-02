@@ -9,6 +9,7 @@ import stanford.karel.Karel;
 public class Problem07 extends Karel {
 	
 	public void run(){
+		if(frontIsClear()){
 		while(frontIsClear()){
 //ვავსებ პირველ ქუჩას ბრილიანტებით:
 		while(frontIsClear()){
@@ -58,8 +59,24 @@ public class Problem07 extends Karel {
 		
 		}
 		}
+	}else{
+		turnLeft();
+		while(frontIsClear()){
+			if(beepersPresent()){
+				move();
+			}else{
+			putBeeper();
+			move();
+			}
+		}
+		if(noBeepersPresent()){
+			putBeeper();
+		}
+//ეს იმისთვის, რომ იმუშაოს ერთ სვეტიან სამყაროში.
 	}
-}
+	}
 //ვასწავლე სამი ქუჩის გავლა და ვსვამ ციკლში.
+
 	
+}
 
