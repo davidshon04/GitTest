@@ -24,8 +24,24 @@ public class Problem06 extends Karel{
 			turnAround();
 		}
 	}
-		
-	}
+		for(int i=0; i<3; i++){
+			move();
+		}
+		while(beepersPresent()){
+			if(beepersPresent()){
+				pickBeeper();
+				turnAround();
+				for(int i=0; i<3; i++){
+					move();
+				}
+				putBeeper();
+				turnAround();
+				for(int i=0; i<3; i++){
+					move();
+				}
+			}
+		}
+		}
 	private void turnAround(){
 		turnLeft();
 		turnLeft();
