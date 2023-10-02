@@ -24,6 +24,7 @@ public class Problem06 extends Karel{
 			turnAround();
 		}
 	}
+//ვაბრუნებ ბიფერებს ადგილზე:	
 		for(int i=0; i<3; i++){
 			move();
 		}
@@ -39,6 +40,24 @@ public class Problem06 extends Karel{
 				for(int i=0; i<3; i++){
 					move();
 				}
+			}
+		}
+		
+		turnAround();
+		move();
+		move();
+		turnAround();
+		while(beepersPresent()){
+			if(beepersPresent()){
+				pickBeeper();
+				move();
+				putBeeper();
+				move();
+				putBeeper();
+				turnAround();
+				move();
+				move();
+				turnAround();
 			}
 		}
 		}
