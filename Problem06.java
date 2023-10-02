@@ -8,6 +8,7 @@ public class Problem06 extends Karel{
 	
 	public void run(){
 		move();
+//ვიღებ ბრილიანტებს სათითაოდ 2x1 უჯრიდან და გადამაქვს 4x1-სა და 5x1-ზე.		
 		while(beepersPresent()){
 		if(beepersPresent()){
 			pickBeeper();
@@ -23,6 +24,7 @@ public class Problem06 extends Karel{
 			turnAround();
 		}
 	}
+		
 	}
 	private void turnAround(){
 		turnLeft();
