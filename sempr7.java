@@ -8,11 +8,12 @@ public class sempr7 extends Karel{
 //თქვენი პროგრამა უნდა მუშაობდეს ნებისმიერი ზომის სამყაროსათვის.
 	
 	public void run(){
-		
-		while (beepersInBag()){ // next line exists
+		fillLine();
+		while (leftIsClear()){ // next line exists
 //			go to next line start position
-			fillLine();
 			goToNextLineStart();
+			fillLine();
+			
 		}
 	}
 	private void fillLine(){
