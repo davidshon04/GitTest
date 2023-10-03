@@ -11,7 +11,7 @@ public class sempr7 extends Karel{
 		
 		while (beepersInBag()){ // next line exists
 //			go to next line start position
-	//		goToNextLineStart();
+			goToNextLineStart();
 			fillLine();
 		}
 	}
@@ -26,6 +26,22 @@ public class sempr7 extends Karel{
 			}
 		}
 	}
+	
+	private void goToNextLineStart(){
+		turnLeft();
+		move();
+		turnLeft();
+		while(frontIsClear()){
+			move();
+		}
+		turnAround();
 	}
+	
+	private void turnAround(){
+		turnLeft();
+		turnLeft();
+	}
+
+}
 
 
