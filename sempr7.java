@@ -9,11 +9,9 @@ public class sempr7 extends Karel{
 	
 	public void run(){
 		fillLine();
-		while (leftIsClear()){ // next line exists
-//			go to next line start position
+		while (leftIsClear()){ 
 			goToNextLineStart();
-			fillLine();
-			
+			fillLine();		
 		}
 	}
 	private void fillLine(){
@@ -44,5 +42,7 @@ public class sempr7 extends Karel{
 	}
 
 }
+
+//6,8,9,10
 
 
