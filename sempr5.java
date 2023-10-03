@@ -9,7 +9,7 @@ public class sempr5 extends Karel{
 	
 	public void run(){
 		if(noBeepersPresent()){
-		putBeeper();
+			putBeeper();
 		}
 		while(frontIsClear()){
 			move();
