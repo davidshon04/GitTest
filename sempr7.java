@@ -11,8 +11,8 @@ public class sempr7 extends Karel{
 		
 		while (beepersInBag()){ // next line exists
 //			go to next line start position
-			goToNextLineStart();
 			fillLine();
+			goToNextLineStart();
 		}
 	}
 	private void fillLine(){
