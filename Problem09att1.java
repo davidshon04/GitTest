@@ -10,7 +10,7 @@ public class Problem09att1 extends Karel{
 		move();
 		createTable();
 		bringBackStartingBeepers();
-		//putMultipliedBeepers();
+		putMultipliedBeepers();
 	}
 	
 	private void createTable(){
@@ -86,6 +86,25 @@ public class Problem09att1 extends Karel{
 			putBeeper();
 			turnAround();
 			move();
+			move();
+		}
+	}
+	
+	private void putMultipliedBeepers(){
+		for(int i=0; i<2; i++){
+			turnLeft();
+			move();
+		}
+		while(beepersPresent()){
+			pickBeeper();
+			turnAround();
+			move();
+			turnRight();
+			move();
+			putBeeper();
+			turnAround();
+			move();
+			turnLeft();
 			move();
 		}
 	}
