@@ -36,6 +36,10 @@ public class Problem10att1 extends Karel{
 			}
 			move();
 			putBeeper();
+			turnAround();
+			move();
+			move();
+			turnAround();
 		}
 	}
 	
