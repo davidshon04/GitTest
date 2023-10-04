@@ -8,10 +8,11 @@ public class Problem10att1 extends Karel{
 	
 	public void run(){
 		move();
-		divideBeepers();
+		firstDivision();
+		puttingFirstDivision();
 	}
 
-	private void divideBeepers(){
+	private void firstDivision(){
 		while(beepersPresent()){
 			move();
 			while(beepersPresent()){
@@ -34,7 +35,10 @@ public class Problem10att1 extends Karel{
 				move();
 				turnAround();
 			}	
-		}
+		}	
+	}
+	
+	private void puttingFirstDivision(){
 		move();
 		putBeeper();
 		turnAround();
