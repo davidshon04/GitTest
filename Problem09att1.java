@@ -14,8 +14,10 @@ public class Problem09att1 extends Karel{
 	}
 	
 	private void createTable(){
-		createStartingTable();
-		bringUpperBeepersBack();
+		while(beepersPresent()){
+			createStartingTable();
+			bringUpperBeepersBack();
+		}	
 	}
 	
 	private void turnAround(){
@@ -65,5 +67,11 @@ public class Problem09att1 extends Karel{
 			move();
 			move();	
 		}
+		turnAround();
+		move();
+		move();
+		turnRight();
+		move();
+		turnAround();
 	}
 }
