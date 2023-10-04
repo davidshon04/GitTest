@@ -10,6 +10,7 @@ public class Problem10att1 extends Karel{
 		move();
 		firstDivision();
 		puttingFirstDivision();
+		bringingBackDividor();
 	}
 
 	private void firstDivision(){
@@ -49,6 +50,25 @@ public class Problem10att1 extends Karel{
 	
 	private void turnAround(){
 		turnLeft();
+		turnLeft();
+	}
+	
+	private void bringingBackDividor(){
+		move();
+		turnLeft();
+		move();
+		while(beepersPresent()){
+			turnAround();
+			pickBeeper();
+			move();
+			putBeeper();
+			turnAround();
+			move();
+		}
+		for(int i=0; i<2; i++){
+			turnLeft();
+			move();
+		}
 		turnLeft();
 	}
 }
