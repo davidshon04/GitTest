@@ -81,6 +81,7 @@ public class Problem08att1 extends Karel{
 			for(int i=0; i<3; i++){
 				move();
 			}
+			putBeeper();
 			turnAround();
 			for(int i=0; i<3; i++){
 				move();
