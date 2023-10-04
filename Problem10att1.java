@@ -8,9 +8,11 @@ public class Problem10att1 extends Karel{
 	
 	public void run(){
 		move();
-		firstDivision();
-		puttingFirstDivision();
-		bringingBackDividor();
+		while(beepersPresent()){
+			firstDivision();
+			puttingFirstDivision();
+			bringingBackDividor();
+		}
 	}
 
 	private void firstDivision(){
