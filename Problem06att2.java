@@ -1,4 +1,39 @@
+import stanford.karel.Karel;
 
-public class Problem06att2 {
+//6. კარელმა უნდა შეკრიბოს ორი რიცხვი, 2x1 უჯრაზე დევს n ცალი ბრილიანტი, 3x1 უჯრაზე m 
+//ცალი ბრილიანტი, კარელმა 4x1 უჯრაზე უნდა დადოს n+m ბრილიანტი. ჩათვალეთ, რომ
+//კარელს ჩანთაში უსასრულო რაოდენობის ბრილიანტი აქვს.
+
+public class Problem06att2 extends Karel{
+	
+	public void run(){
+		move();
+		pickAndPutDoubled();
+		//bringBackExtraBeepers();		
+		//move();
+		//pickAndPutDoubled();
+		//bringBackExtraBeepers();
+	}
+	
+	private void pickAndPutDoubled(){
+		while(beepersPresent()){
+			pickBeeper();
+			move();
+			for(int i=0; i<2; i++){
+				move();
+				putBeeper();
+			}
+			turnAround();
+			for(int i=0; i<3; i++){
+				move();
+			}
+			turnAround();
+		}
+	}
+	
+	private void turnAround(){
+		turnLeft();
+		turnLeft();
+	}
 
 }
