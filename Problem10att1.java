@@ -33,14 +33,14 @@ public class Problem10att1 extends Karel{
 				move();
 				move();
 				turnAround();
-			}
-			move();
-			putBeeper();
-			turnAround();
-			move();
-			move();
-			turnAround();
+			}	
 		}
+		move();
+		putBeeper();
+		turnAround();
+		move();
+		move();
+		turnAround();
 	}
 	
 	private void turnAround(){
