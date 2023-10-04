@@ -19,13 +19,12 @@ public class Problem10att1 extends Karel{
 				turnLeft();
 				move();
 				putBeeper();
-				turnLeft();
-				move();
-				putBeeper();
-				turnLeft();
-				move();
-				turnLeft();
+				for(int i=0; i<3; i++){
+					turnLeft();
+					move();
+				}	
 				pickBeeper();
+				turnLeft();
 				for(int i=0; i<3; i++){
 					move();
 				}
