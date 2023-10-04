@@ -8,10 +8,11 @@ public class Problem06att2 extends Karel{
 	
 	public void run(){
 		move();
+		for(int i=0; i<2; i++){
 		pickAndPutDoubled();
 		bringBackExtraBeepers();
-		pickAndPutDoubled();
-		bringBackExtraBeepers();
+		}
+		addBeepers();
 	}
 	
 	private void pickAndPutDoubled(){
@@ -56,6 +57,18 @@ public class Problem06att2 extends Karel{
 			move();
 			move();
 			turnAround();
+		}
+	}
+	
+	private void addBeepers(){
+		move();
+		while(beepersPresent()){
+			pickBeeper();
+			turnAround();
+			move();
+			putBeeper();
+			turnAround();
+			move();
 		}
 	}
 
