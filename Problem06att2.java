@@ -9,10 +9,9 @@ public class Problem06att2 extends Karel{
 	public void run(){
 		move();
 		pickAndPutDoubled();
-		bringBackExtraBeepers();		
-		//move();
-		//pickAndPutDoubled();
-		//bringBackExtraBeepers();
+		bringBackExtraBeepers();
+		pickAndPutDoubled();
+		bringBackExtraBeepers();
 	}
 	
 	private void pickAndPutDoubled(){
@@ -51,6 +50,12 @@ public class Problem06att2 extends Karel{
 			for(int i=0; i<3; i++){
 				move();
 			}
+		}
+		while(noBeepersPresent()){
+			turnAround();
+			move();
+			move();
+			turnAround();
 		}
 	}
 
