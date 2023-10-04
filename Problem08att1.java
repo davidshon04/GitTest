@@ -12,7 +12,7 @@ public class Problem08att1 extends Karel{
 		}
 		carryMBeepers();
 		carryNMinusM();
-		//bringBackBeepers();
+		bringBackMBeepers();
 	}
 
 	private void carryMBeepers(){
@@ -49,6 +49,23 @@ public class Problem08att1 extends Karel{
 			for(int i=0; i<3; i++){
 				move();
 			}
+			turnAround();
+		}
+	}
+	
+	private void bringBackMBeepers(){
+		turnAround();
+		move();
+		turnAround();
+		while(beepersPresent()){
+			pickBeeper();
+			for(int i=0; i<2; i++){
+				move();
+				putBeeper();
+			}
+			turnAround();
+			move();
+			move();
 			turnAround();
 		}
 	}
