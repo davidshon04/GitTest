@@ -15,7 +15,7 @@ public class Problem09att1 extends Karel{
 	
 	private void createTable(){
 		while(beepersPresent()){
-			createStartingTable();
+			carryNBeepersAndDoubleMBeepers();
 			bringUpperBeepersBack();
 		}	
 	}
@@ -31,7 +31,7 @@ public class Problem09att1 extends Karel{
 		}
 	}
 	
-	private void createStartingTable(){
+	private void carryNBeepersAndDoubleMBeepers(){
 		while(beepersPresent()){
 			pickBeeper();
 			move();
@@ -40,17 +40,21 @@ public class Problem09att1 extends Karel{
 			turnAround();
 			move();
 			turnRight();
-			while(beepersPresent()){
-				pickBeeper();
-				for(int i=0; i<2; i++){
-					move();
-					putBeeper();
-				}
-				turnAround();
+			doubleMBeepers();
+		}
+	}
+	
+	private void doubleMBeepers(){
+		while(beepersPresent()){
+			pickBeeper();
+			for(int i=0; i<2; i++){
 				move();
-				move();
-				turnAround();
+				putBeeper();
 			}
+			turnAround();
+			move();
+			move();
+			turnAround();
 		}
 	}
 	
