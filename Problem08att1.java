@@ -11,11 +11,18 @@ public class Problem08att1 extends Karel{
 			move();
 		}
 		carryMBeepers();
-		carryNMinusM();
+		moveToRemainingBeepers();
+		carryAndDoubleRemainingBeepers();
+		moveToRemainingBeepers();
 		bringBackMBeepers();
-		bringBackNMinusM();
+		bringBackExtraDoubled();
 	}
 
+	private void turnAround(){
+		turnLeft();
+		turnLeft();
+	}
+	
 	private void carryMBeepers(){
 		while(beepersPresent()){
 			pickBeeper();
@@ -30,15 +37,13 @@ public class Problem08att1 extends Karel{
 		}
 	}
 	
-	private void turnAround(){
-		turnLeft();
-		turnLeft();
-	}
-	
-	private void carryNMinusM(){
+	private void moveToRemainingBeepers(){
 		turnAround();
 		move();
 		turnAround();
+	}
+	
+	private void carryAndDoubleRemainingBeepers(){
 		while(beepersPresent()){
 			pickBeeper();
 			move();
@@ -55,9 +60,6 @@ public class Problem08att1 extends Karel{
 	}
 	
 	private void bringBackMBeepers(){
-		turnAround();
-		move();
-		turnAround();
 		while(beepersPresent()){
 			pickBeeper();
 			for(int i=0; i<2; i++){
@@ -71,7 +73,7 @@ public class Problem08att1 extends Karel{
 		}
 	}
 	
-	private void bringBackNMinusM(){
+	private void bringBackExtraDoubled(){
 		for(int i=0; i<4; i++){
 			move();
 		}
