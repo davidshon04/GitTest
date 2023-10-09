@@ -8,17 +8,15 @@ public class Problem09att1 extends Karel{
 
 	public void run(){
 		move();
-		createTable();
-		bringBackStartingBeepers();
-		putMultipliedBeepers();
+		while(beepersPresent()){
+			carryBeeperFromNBeepersAndDoubleMBeepers();
+			bringUpperBeepersBack();
+			goTo2X1();
+		}
+		bringBackNBeepersFrom4X1();
+		bringMultipliedBeepersToDestination();
 	}
 	
-	private void createTable(){
-		while(beepersPresent()){
-			carryNBeepersAndDoubleMBeepers();
-			bringUpperBeepersBack();
-		}	
-	}
 	
 	private void turnAround(){
 		turnLeft();
@@ -31,7 +29,7 @@ public class Problem09att1 extends Karel{
 		}
 	}
 	
-	private void carryNBeepersAndDoubleMBeepers(){
+	private void carryBeeperFromNBeepersAndDoubleMBeepers(){
 		while(beepersPresent()){
 			pickBeeper();
 			move();
@@ -60,7 +58,7 @@ public class Problem09att1 extends Karel{
 	
 	private void bringUpperBeepersBack(){
 		move();
-		move();
+		move();	
 		while(beepersPresent()){
 			turnAround();
 			pickBeeper();
@@ -70,7 +68,10 @@ public class Problem09att1 extends Karel{
 			turnAround();
 			move();
 			move();	
-		}
+		}	
+	}
+	
+	private void goTo2X1(){
 		turnAround();
 		move();
 		move();
@@ -79,7 +80,7 @@ public class Problem09att1 extends Karel{
 		turnAround();
 	}
 	
-	private void bringBackStartingBeepers(){
+	private void bringBackNBeepersFrom4X1(){
 		move();
 		move();
 		while(beepersPresent()){
@@ -94,11 +95,19 @@ public class Problem09att1 extends Karel{
 		}
 	}
 	
-	private void putMultipliedBeepers(){
+	private void bringMultipliedBeepersToDestination(){
+		goToMultipliedBeepers();
+		bringThemToDestination();
+	}
+	
+	private void goToMultipliedBeepers(){
 		for(int i=0; i<2; i++){
 			turnLeft();
 			move();
 		}
+	}
+	
+	private void bringThemToDestination(){
 		while(beepersPresent()){
 			pickBeeper();
 			turnAround();
