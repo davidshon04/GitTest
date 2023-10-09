@@ -9,42 +9,66 @@ public class Problem10att1 extends Karel{
 	public void run(){
 		move();
 		while(beepersPresent()){
-			firstDivision();
-			puttingFirstDivision();
-			bringingBackDividor();
+			firstSubtraction();
+			markSubtractionAndStartOver();	
 		}
-		bringBackNBeepers();
+		bringBackNBeepersFrom5X1To2X1();
 	}
 
-	private void firstDivision(){
+	private void firstSubtraction(){
 		while(beepersPresent()){
 			move();
 			while(beepersPresent()){
-				pickBeeper();
-				turnLeft();
-				move();
-				putBeeper();
-				for(int i=0; i<2; i++){
-					turnLeft();
-					move();
-				}	
-				pickBeeper();
-				turnLeft();
-				for(int i=0; i<3; i++){
-					move();
-				}
-				putBeeper();
-				turnAround();
-				move();
-				move();
-				turnAround();
+				bringBeeperFrom3X1Up();
+				moveTo2X1();	
+				carryBeeperFrom2X1To5X1();
+				goBackTo3X1();
 			}	
 		}	
 	}
 	
-	private void puttingFirstDivision(){
+	private void bringBeeperFrom3X1Up(){
+		pickBeeper();
+		turnLeft();
 		move();
 		putBeeper();
+	}
+	
+	private void moveTo2X1(){
+		for(int i=0; i<2; i++){
+			turnLeft();
+			move();
+		}
+	}
+	
+	private void carryBeeperFrom2X1To5X1(){
+		pickBeeper();
+		turnLeft();
+		for(int i=0; i<3; i++){
+			move();
+		}
+		putBeeper();
+	}
+	
+	private void goBackTo3X1(){
+		turnAround();
+		move();
+		move();
+		turnAround();
+	}
+	
+	private void markSubtractionAndStartOver(){
+		markingSubtraction();
+		startTheCycleAgain();
+		bringingMBeepersBackTo3X1();
+	}
+	
+	private void markingSubtraction(){
+		move();
+		putBeeper();
+	}
+	
+	private void startTheCycleAgain(){
 		turnAround();
 		move();
 		move();
@@ -56,10 +80,20 @@ public class Problem10att1 extends Karel{
 		turnLeft();
 	}
 	
-	private void bringingBackDividor(){
+	private void bringingMBeepersBackTo3X1(){
+		goTo3X2();
+		copyingBackOperation();
+		moveTo2X1();
+		turnLeft();
+	}
+	
+	private void goTo3X2(){
 		move();
 		turnLeft();
 		move();
+	}
+	
+	private void copyingBackOperation(){
 		while(beepersPresent()){
 			turnAround();
 			pickBeeper();
@@ -68,14 +102,9 @@ public class Problem10att1 extends Karel{
 			turnAround();
 			move();
 		}
-		for(int i=0; i<2; i++){
-			turnLeft();
-			move();
-		}
-		turnLeft();
 	}
 	
-	private void bringBackNBeepers(){
+	private void bringBackNBeepersFrom5X1To2X1(){
 		for(int i=0; i<3; i++){
 			move();
 		}
