@@ -14,6 +14,8 @@ public class Problem12 extends GraphicsProgram{
 		
 		GRect myWindow = new GRect (50, 50);
 		add(myWindow, 200, 240);
+		
+		myWindow = new GRect (50, 50);
 		add(myWindow, 300, 240);
 //		add(new GLine(), 200, )
 	}
