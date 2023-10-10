@@ -15,6 +15,9 @@ public class GraphicsSample extends GraphicsProgram{
 		
 		myRect = new GRect(100, 200);
 		add(myRect, 300, 150);
+		
+		
+		myRect.setFilled(true);
 	}
 
 }
