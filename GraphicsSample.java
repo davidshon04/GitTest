@@ -10,7 +10,8 @@ public class GraphicsSample extends GraphicsProgram{
 		GRect myRect = new GRect(100, 200);
 		add(myRect,100,150);
 		
-		add(myRect,300,150);
+		GRect secondRect = new GRect(100,200);
+		add(secondRect,300,150);
 	}
 
 }
