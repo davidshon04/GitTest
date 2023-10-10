@@ -13,6 +13,8 @@ public class GraphicsSample extends GraphicsProgram{
 //		GRect secondRect = new GRect(100, 200);
 //		add(secondRect, 300, 150);
 		
+		myRect.setFilled(true);
+		
 		myRect = new GRect(100, 200);
 		add(myRect, 300, 150);
 		
