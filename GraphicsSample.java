@@ -19,7 +19,7 @@ public class GraphicsSample extends GraphicsProgram{
 		
 		GRect oldRect = myRect;
 		myRect = new GRect(100, 200);
-		add(myRect, 300, 150);
+		add(myRect, 100, 250);
 		
 		
 		myRect.setFilled(true);
