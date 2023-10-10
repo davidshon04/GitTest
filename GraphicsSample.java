@@ -8,10 +8,13 @@ public class GraphicsSample extends GraphicsProgram{
 //		add(new GRect(100, 200), 100, 150);
 //		add(new GOval(100, 200), 100, 150);
 		GRect myRect = new GRect(100, 200);
-		add(myRect,100,150);
+		add(myRect, 100, 150);
 		
-		GRect secondRect = new GRect(100,200);
-		add(secondRect,300,150);
+//		GRect secondRect = new GRect(100, 200);
+//		add(secondRect, 300, 150);
+		
+		myRect = new GRect(100, 200);
+		add(myRect, 300, 150);
 	}
 
 }
