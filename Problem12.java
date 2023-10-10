@@ -8,7 +8,7 @@ public class Problem12 extends GraphicsProgram{
 	public void run(){
 		add(new GRect(150, 200), 200, 200);
 		add(new GRect(50, 80), 250, 320);
-//		add(new GRect ())
+		add(new GRect (50, 50), 200, 220);
 	}
 
 }
