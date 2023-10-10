@@ -22,5 +22,5 @@ public class Problem12 extends GraphicsProgram{
 		add(new GLine (200, 200, 275, 150));
 		add(new GLine (275, 150, 350, 200));
 	}
-
+//12,13,14
 }
