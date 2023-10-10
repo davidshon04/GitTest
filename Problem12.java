@@ -20,6 +20,7 @@ public class Problem12 extends GraphicsProgram{
 		add(myWindow, 300, 240);
 		
 		add(new GLine (200, 200, 275, 150));
+		add(new GLine (275, 150, 350, 400));
 	}
 
 }
