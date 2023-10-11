@@ -10,7 +10,9 @@ public class Problem11 extends Karel{
 		while(noBeepersPresent()){
 			while(rightIsBlocked()){
 				if(frontIsBlocked()){
-					turnLeft();
+					while(frontIsBlocked()){
+						turnLeft();
+					}
 					move();
 					turnRight();
 				}
