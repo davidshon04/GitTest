@@ -6,7 +6,25 @@ import stanford.karel.Karel;
 
 public class Problem11 extends Karel{
 	public void run(){
-		
+//მინდა, რომ კარელმა მარჯვენა ხელი მიადოს კედელს და ასე გაუყვეს ბილიკს.
+		while(noBeepersPresent()){
+			while(rightIsBlocked()){
+				if(frontIsBlocked()){
+					turnLeft();
+					move();
+					turnRight();
+				}
+				move();
+				turnRight();
+				move();
+			}
+		}
+	}
+	
+	private void turnRight(){
+		for(int i=0; i<3; i++){
+			turnLeft();
+		}
 	}
 
 }
