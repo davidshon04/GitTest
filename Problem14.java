@@ -31,7 +31,10 @@ public class Problem14 extends GraphicsProgram{
 		add(robotMouth, middleX-50, middleY+50);
 		
 //მივახატოთ ანტენები:
-		GLine robotAnten = new GLine (middleX-100+20, middleY-100, middleX-100+20, middleY-100-30);
+		GLine robotAnten = new GLine (middleX-100+20, middleY-100, middleX-100+20, middleY-100-60);
+		add(robotAnten);
+		
+		robotAnten = new GLine (middleX+100-20, middleY-100, middleX+100-20, middleY-100-60);
 		add(robotAnten);
 	}
 
