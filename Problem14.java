@@ -1,3 +1,4 @@
+import acm.graphics.GLine;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
@@ -28,6 +29,10 @@ public class Problem14 extends GraphicsProgram{
 //ვხატავ რობოტის პირს:
 		GRect robotMouth = new GRect (100, 20);
 		add(robotMouth, middleX-50, middleY+50);
+		
+//მივახატოთ ანტენები:
+		GLine robotAnten = new GLine (middleX-100+20, middleY-100, middleX-100+20, middleY-100-30);
+		add(robotAnten);
 	}
 
 }
