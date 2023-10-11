@@ -8,21 +8,13 @@ public class Problem11 extends Karel{
 	public void run(){
 //მინდა, რომ კარელმა მარჯვენა ხელი მიადოს კედელს და ასე გაუყვეს ბილიკს.
 		while(noBeepersPresent()){
-			while(rightIsBlocked()){
-				if(frontIsBlocked()){
-					while(frontIsBlocked()){
-						turnLeft();
-					}
-					move();
-				}
-				move();
+			turnRight();
+			while(frontIsBlocked()){
+				turnLeft();
 			}
-			while(frontIsClear()){
-				turnRight();
-				move();
-			}
+			move();
 		}
-	}
+	}	
 	
 	private void turnRight(){
 		for(int i=0; i<3; i++){
