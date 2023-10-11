@@ -17,8 +17,10 @@ public class Problem11 extends Karel{
 				}
 				move();
 			}
-			turnRight();
-			move();
+			while(frontIsClear()){
+				turnRight();
+				move();
+			}
 		}
 	}
 	
