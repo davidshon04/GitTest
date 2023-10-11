@@ -20,7 +20,7 @@ public class Problem14 extends GraphicsProgram{
 		
 //ვხატავ თვალებს:
 		GRect robotEye = new GRect (30, 30);
-		add(robotEye, middleX-35, middleY-35);
+		add(robotEye, middleX-70, middleY-35);
 		
 		robotEye = new GRect (30, 30);
 		add(robotEye, middleX+35, middleY-35);
