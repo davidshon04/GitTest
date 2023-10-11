@@ -24,6 +24,10 @@ public class Problem14 extends GraphicsProgram{
 		
 		robotEye = new GRect (30, 30);
 		add(robotEye, middleX+35, middleY-35);
+		
+//ვხატავ რობოტის პირს:
+		GRect robotMouth = new GRect (100, 20);
+		add(robotMouth, middleX-50, middleY+50);
 	}
 
 }
