@@ -15,8 +15,8 @@ public class SemPr12 extends GraphicsProgram{
 	private void drawHouse(){
 		drawWall();
 		drawWindows();
-		drawRoof();
-		drawDoor();
+//		drawRoof();
+//		drawDoor();
 	}
 
 	private void drawWindows() {
