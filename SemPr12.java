@@ -1,3 +1,4 @@
+import acm.graphics.GLine;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
@@ -7,6 +8,7 @@ public class SemPr12 extends GraphicsProgram{
 	private static final double House_Height = 300;
 	private static final double Window_Width = 40;
 	private static final double Window_Height = 60;
+	private static final double Roof_Height = 40;
 	
 	public void run(){
 		drawHouse();
@@ -15,8 +17,18 @@ public class SemPr12 extends GraphicsProgram{
 	private void drawHouse(){
 		drawWall();
 		drawWindows();
-//		drawRoof();
+		drawRoof();
 //		drawDoor();
+	}
+
+	private void drawRoof() {
+		double x1 = getWidth()/2-House_Width/2;
+		double x2 = getWidth();
+		double y1 = getHeight()/2-House_Height;
+		double y2 = getHeight()/2-House_Height-Roof_Height;
+		GLine line = new GLine(x1, y1, x2, y2);
+		add(line);
+		
 	}
 
 	private void drawWindows() {
