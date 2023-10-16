@@ -15,8 +15,7 @@ public class Problem16 extends ConsoleProgram {
 		double divsum = div1 + div2 + div3;
 		double harmonic = 1 / divsum;
 		
-		println("Harmonic Mean is: " + harmonic + ".");
-		
+		println("Harmonic Mean is: " + harmonic + ".");	
 	}
 
 }
