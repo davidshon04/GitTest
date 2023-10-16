@@ -11,7 +11,7 @@ public class Problem17 extends ConsoleProgram {
 		int wholeNumber = (int) realNumber;
 		println(wholeNumber);
 		
-		double fraction = (double) (realNumber - wholeNumber);
+		double fraction = realNumber - (double) wholeNumber;
 		println(fraction);
 	}
 
