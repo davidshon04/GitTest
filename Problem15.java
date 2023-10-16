@@ -8,7 +8,7 @@ public class Problem15 extends ConsoleProgram {
 		int num2 = readInt("Enter Second Number: ");
 		
 		int sum = num1 + num2;
-		double average = sum / 2;
+		double average = (double) sum / 2;
 		println("The Average is " + average + ".");
 	}
 
