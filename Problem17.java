@@ -13,8 +13,8 @@ public class Problem17 extends ConsoleProgram {
 		
 		double ggg = wholeNumber;
 		println(ggg);
-//		double fraction = realNumber - ;
-	//	println(fraction);
+		double fraction = realNumber - ggg;
+		println(fraction);
 	}
 
 }
