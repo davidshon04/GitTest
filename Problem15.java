@@ -4,8 +4,8 @@ import acm.program.ConsoleProgram;
 
 public class Problem15 extends ConsoleProgram {
 	public void run() {
-		int num1 = readInt("Enter First Number: ");
-		int num2 = readInt("Enter Second Number: ");
+		double num1 = readInt("Enter First Number: ");
+		double num2 = readInt("Enter Second Number: ");
 		
 		double average = (num1 + num2)/2;
 		println(average);
