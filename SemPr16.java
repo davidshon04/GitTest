@@ -10,17 +10,15 @@ public class SemPr16 extends ConsoleProgram {
 	public void run() {
 		println ("This Program will add numbers after you enter Zero");
 		
-		int num = readInt("Enter the Number: ");
 		
 		
-		while(true){
-			if(num == Sentinel) {
-				int total = 0;
-				total += num;
-			}
-			
+		int total = 0;
+		while(true) {
+			int num = readInt("Enter the Number: ");
+			if(num == Sentinel) break; 
+				total += num;	
 		}
-		
+		println("The Total is: " + total + ".");
 		
 	}
 
