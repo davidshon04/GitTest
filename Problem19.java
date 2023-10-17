@@ -7,9 +7,10 @@ public class Problem19 extends ConsoleProgram {
 	public void run() {
 		int num = readInt ("Enter a Number: ");
 		
-		for(int i=0; i < num; i++) {
+		for(int i = 0; i < num; i++) {
 			println("hello" + i);
 		}
 	}
 
 }
+

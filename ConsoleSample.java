@@ -8,7 +8,7 @@ public class ConsoleSample extends ConsoleProgram{
 		int firstNum = readInt("Enter first number: ");
 		int secondNum = readInt("Enter second number: ");
 		
-		int average = (firstNum+secondNum)/2;
+		double average = (double) (firstNum+secondNum) / 2;
 		println(average);
 	}
 
