@@ -5,13 +5,22 @@ import acm.program.ConsoleProgram;
 
 public class SemPr16 extends ConsoleProgram {
 
-	//private static final 
+	private static final int Sentinel = 0;
 	
 	public void run() {
-		int num = readInt ("Enter the Number: ");
-		while (num != 0) {
-			println (num);
+		println ("This Program will add numbers after you enter Zero");
+		
+		int num = readInt("Enter the Number: ");
+		
+		
+		while(true){
+			if(num == Sentinel) {
+				int total = 0;
+				total += num;
+			}
+			
 		}
+		
 		
 	}
 
