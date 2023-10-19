@@ -24,3 +24,4 @@ public class SemPr22 extends GraphicsProgram {
 	}
 
 }
+//23-26
