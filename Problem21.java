@@ -11,7 +11,7 @@ public class Problem21 extends GraphicsProgram {
 	public void run() {
 	//	int i = getHeight() / N_Rows;
 		for(int i = 0; i < N_Rows; i++){
-			GLine rowLine = new GLine(0, i, getWidth(), i);
+			GLine rowLine = new GLine(0, getHeight() / N_Rows, getWidth(), getHeight() / N_Rows);
 			add(rowLine);
 		}
 	}
