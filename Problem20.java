@@ -11,7 +11,7 @@ public class Problem20 extends ConsoleProgram {
 			int numbers = readInt ("Enter Assembly: ");
 				total += numbers;
 		}
-		println ("The Sum is:" + total + ".");
+		println ("The Sum is: " + total + ".");
 	}
 
 }
