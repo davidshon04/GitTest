@@ -13,7 +13,9 @@ public class Problem22att2 extends GraphicsProgram {
 				GRect square = new GRect (squareSize, squareSize);
 				double x = i * squareSize;
 				double y = j * squareSize;
+				square.setFilled((i+j) % 2 != 0);
 				add(square, x, y);
+				
 			}	
 		}
 	}
