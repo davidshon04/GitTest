@@ -9,9 +9,9 @@ public class Problem21 extends GraphicsProgram {
 //	private static final int N_Columns = 10;
 	
 	public void run() {
-	//	int i = getHeight() / N_Rows;
 		for(int i = 0; i < N_Rows; i++){
-			GLine rowLine = new GLine(0, getHeight() / N_Rows, getWidth(), getHeight() / N_Rows);
+			int yCoord = getHeight() / N_Rows;
+			GLine rowLine = new GLine(0, yCoord * i, getWidth(), yCoord * i);
 			add(rowLine);
 		}
 	}
