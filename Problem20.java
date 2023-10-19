@@ -7,7 +7,7 @@ public class Problem20 extends ConsoleProgram {
 		int n = readInt ("Enter the Number: ");
 		
 		int total = 0;
-		for(int i = 0; i < n; i++){
+		for(int i = 1; i <= n; i++){
 			int numbers = readInt ("Enter Assembly " + i + ":");
 			total += numbers;
 		}
