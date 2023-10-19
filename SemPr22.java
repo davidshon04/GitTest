@@ -11,7 +11,7 @@ public class SemPr22 extends GraphicsProgram {
 			for(int j = 0; j < NUM_CELLS; j++) {
 				double x = i * length;
 				double y = j * length;
-				boolean isFilled = (i+j) % 2 == 0;
+				boolean isFilled = (i+j) % 2 == 1;
 				drawSquare(x, y, length, isFilled);
 			}
 		}
