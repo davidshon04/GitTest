@@ -16,7 +16,7 @@ public class Problem22 extends GraphicsProgram {
 	
 	private void drawColumns() {
 		for(int j = 0; j <= N_Columns; j++){
-			int xCoord = getHeight() / N_Columns;
+			double xCoord = getHeight() / N_Columns;
 			GLine columnLine = new GLine(xCoord * j, 0, xCoord * j, getHeight());
 			add(columnLine);
 		}
@@ -24,7 +24,7 @@ public class Problem22 extends GraphicsProgram {
 
 	private void drawRows() {
 		for(int i = 0; i < N_Rows; i++){
-			int yCoord = getHeight() / N_Rows;
+			double yCoord = getHeight() / N_Rows;
 			GLine rowLine = new GLine(0, yCoord * i, getHeight(), yCoord * i);
 			add(rowLine);
 		}
