@@ -1,4 +1,3 @@
-import acm.graphics.GLine;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
@@ -11,8 +10,6 @@ public class Problem22 extends GraphicsProgram {
 	 
 	
 	public void run(){
-	//	drawRows();
-	//	drawColumns();
 		drawSquares();
 	//	colorSquares();
 	}
