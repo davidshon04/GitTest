@@ -11,7 +11,7 @@ public class Problem24 extends ConsoleProgram {
 		for(int i = 2; i <= n; i++) {
 			double div1 = n / i;
 			int div2 = n / i;
-			if(div1 - (double) div2 == 0){
+			if(div1 == (double) div2){
 				total += 1;
 			}
 		}
