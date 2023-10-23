@@ -9,7 +9,7 @@ public class Problem24 extends ConsoleProgram {
 		
 		int total = 1;
 		for(int i = 2; i <= n; i++) {
-			double div1 = (double) (n / i);
+			double div1 = (double) n / i;
 			int div2 =(int) (n / i);
 			if(div1 == (double) div2){
 				total += 1;
