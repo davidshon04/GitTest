@@ -6,8 +6,8 @@ import acm.program.ConsoleProgram;
 public class SemPrs2324 extends ConsoleProgram {
 	public void run() {
 		int n = readInt("Enter n: ");
-		int sum = calculateSum(n);
 		
+		int sum = calculateSum(n);
 		println("Sum of numbers 1...n is: " + sum + ".");
 		
 		int numDivisors =  numberOfDivisors(n);
