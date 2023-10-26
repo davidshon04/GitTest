@@ -8,7 +8,9 @@ public class Problem28 extends ConsoleProgram {
 		int total = 0;
 		while(true) {
 			int num = readInt("Enter Number: ");
-			//if(num < -1 || num = 0) {
+			if(num < -1 || num == 0) {
+				println("Enter Positive Integers!");
+			}
 			if(num == -1) break;
 			if(num % 2 == 0 && num > 0) {
 				total += 1;
