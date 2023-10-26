@@ -9,7 +9,7 @@ public class Problem27 extends ConsoleProgram {
 		
 		int total = n;
 		for(int i = 1; i < m; i++) {
-			total *= i;
+			total *= n;
 		}
 		println("n^m is: " + total + ".");
 	}
