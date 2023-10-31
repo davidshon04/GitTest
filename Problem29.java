@@ -5,13 +5,14 @@ import acm.program.ConsoleProgram;
 
 public class Problem29 extends ConsoleProgram {
 	public void run() {
-		int n = readInt("Enter the Number: ");
+		while(true) {
+			int n = readInt("Enter the Number: ");
 		
-		int fibN = fib(n);
-		println(fibN);
+			int fibN = fib(n);
+			println(fibN);
+		}
 	}
 
-	
 //	0 1 2 3 4 5 6 7 
 //	0 1 1 2 3 5 8 13
 	private int fib(int n) {
