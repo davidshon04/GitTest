@@ -12,13 +12,13 @@ public class Problem31 extends ConsoleProgram {
 			int div2 = (int) (n / i);
 			if(div1 == (double) div2) {
 				total += 1;
-			}
-			
-			if(total >= 2) {
-				println("Not Simple");
-			} else {
-				println("Simple");
-			}
+			}	
+		}
+		
+		if(total >= 2) {
+			println("Not Simple");
+		} else {
+			println("Simple");
 		}
 	}
 }
