@@ -10,7 +10,7 @@ public class Problem31 extends ConsoleProgram {
 			double div1 = n / i;
 			int div2 = n / i;
 			
-			if((int) div1 == div2) {
+			if(div1 == (double)div2) {
 				println("Not Simple Number");
 			} else {
 				println("Simple Number");
