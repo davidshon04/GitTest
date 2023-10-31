@@ -1,7 +1,7 @@
 import acm.program.ConsoleProgram;
 
-//28. მომხმარებელს შეყავს დადებითი რიცხვები, მანამ სანამ არ შეიყვანს -1 ს, დაბეჭდეთ 
-//რაოდენობა რამდენი ლუწი რიცხვი შეყვანა მომხმარებელმა. 
+//	28. მომხმარებელს შეყავს დადებითი რიცხვები, მანამ სანამ არ შეიყვანს -1 ს, დაბეჭდეთ 
+//	რაოდენობა რამდენი ლუწი რიცხვი შეყვანა მომხმარებელმა. 
 
 public class SemPr28 extends ConsoleProgram {
 	
@@ -14,6 +14,10 @@ public class SemPr28 extends ConsoleProgram {
 			int n = readInt("Enter Number: ");
 			if(n == SENTINEL) {
 				break;
+			}
+			while(n < 0) {
+				println("n must be positive!");
+				n = readInt("Enter Number: ");
 			}
 			if(n % 2 == 0) {
 				numEvens += 1;
