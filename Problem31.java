@@ -9,8 +9,11 @@ public class Problem31 extends ConsoleProgram {
 		for(int i = 2; i < n; i++) {
 			double div1 = n / i;
 			int div2 = n / i;
-			if(div1 == (double) div2) break;
-			println("The Number is not Simple");
+			if(div1 != (double) div2) {
+				println("The Number is not Simple");
+			} else {
+				println("The Number is Simple");
+			}
 		}
 	}
 }
