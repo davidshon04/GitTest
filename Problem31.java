@@ -12,6 +12,5 @@ public class Problem31 extends ConsoleProgram {
 			if(div1 == (double) div2) break;
 			println("The Number is not Simple");
 		}
-		println("The Number is Simple");
 	}
 }
