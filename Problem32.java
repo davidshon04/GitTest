@@ -7,7 +7,7 @@ public class Problem32 extends ConsoleProgram {
 	private static final int MAX_NUM = 1000;
 	
 	public void run() {
-		for(int i = 0; i < MAX_NUM; i++) {
+		for(int i = 1; i < MAX_NUM; i++) {
 			if(isPrime(i)) {
 				println(i);
 			}
@@ -15,6 +15,9 @@ public class Problem32 extends ConsoleProgram {
 	}
 
 	private boolean isPrime(int num) {
+		if(num == 1) {
+			return false;
+		}
 		for(int i = 2; i <= Math.sqrt(num); i++) {
 			if(num % i == 0) {
 				return false;
