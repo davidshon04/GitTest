@@ -11,7 +11,7 @@ public class Problem35 extends ConsoleProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	public void run() {
-		int sumFlips = 0;
+		double sumFlips = 0;
 		for(int i = 0; i < NUM_EXPERIMENTS; i++) {
 			int currFlips = holdExperiment();
 			sumFlips += currFlips;
