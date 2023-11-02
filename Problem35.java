@@ -6,7 +6,7 @@ import acm.util.RandomGenerator;
 
 public class Problem35 extends ConsoleProgram {
 	
-	private static final int NUM_EXPERIMENTS = 10;
+	private static final int NUM_EXPERIMENTS = 10000;
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
