@@ -39,3 +39,4 @@ public class Problem36 extends ConsoleProgram {
 	}
 
 }
+//37, 38
