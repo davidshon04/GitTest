@@ -11,11 +11,12 @@ public class Problem33 extends GraphicsProgram {
 	
 	private static final int MIN_RADIUS = 10;
 	private static final int MAX_RADIUS = 20;
+	private static final int NUM_CIRCLES = 1000;
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	public void run() {
-		for(int i = 1; i <= 100; i++) {
+		for(int i = 1; i <= NUM_CIRCLES; i++) {
 			addRandomCircle();
 		}	
 	}
