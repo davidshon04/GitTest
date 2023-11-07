@@ -9,9 +9,15 @@ public class Problem39 extends GraphicsProgram {
 	private static final int RADIUS = 50;
 	
 	public void run() {
-		int initialX = getWidth() / 2 - RADIUS / 2;
-		int initialY = getHeight() / 2 - RADIUS / 2;
+		int initialX = getWidth() / 2 - RADIUS;
+		int initialY = getHeight() / 2 - RADIUS;
 		GOval ball = new GOval(RADIUS, RADIUS);
 		add(ball, initialX, initialY);
+		ball.setFilled(true);
+		
+		int finalX = getWidth() - 2 * RADIUS;
+		int finalY = initialY;
+		ball.move(finalX, finalY);
+		pause(5);
 	}
 }
