@@ -16,7 +16,7 @@ public class Revision25 extends ConsoleProgram {
 			println("b should be positive!");
 			b = readInt("Enter b: ");
 		}
-		
+
 		int lcm = lcmCounter(a, b);
 		println("LCM is: " + lcm);
 	}
@@ -24,7 +24,7 @@ public class Revision25 extends ConsoleProgram {
 	private int lcmCounter(int a, int b) {
 		int maybeLCM = Math.max(a, b);
 		for (int i = maybeLCM; i <= a * b; i++) {
-			if(i % a == 0 && i % b == 0) {
+			if (i % a == 0 && i % b == 0) {
 				maybeLCM = i;
 				break;
 			}
