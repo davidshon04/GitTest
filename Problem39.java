@@ -11,7 +11,7 @@ public class Problem39 extends GraphicsProgram {
 	public void run() {
 		int initialX = getWidth() / 2 - RADIUS;
 		int initialY = getHeight() / 2 - RADIUS;
-		GOval ball = new GOval(RADIUS, RADIUS);
+		GOval ball = new GOval(2 * RADIUS, 2 * RADIUS);
 		add(ball, initialX, initialY);
 		ball.setFilled(true);
 		
