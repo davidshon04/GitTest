@@ -16,6 +16,7 @@ public class Revision26 extends ConsoleProgram {
 		for(int i = maybeGCD; i > 0; i--) {
 			if(a % i == 0 && b % i == 0) {
 				maybeGCD = i;
+				break;
 			}
 		}
 		return maybeGCD;
