@@ -30,7 +30,13 @@ public class Problem37 extends ConsoleProgram {
 	}
 
 	private int readBet() {
-		int bet = readInt("Enter bet number(0 - 36)");
-		return bet;
+		while(true) {
+			int bet = readInt("Enter bet number(0 - 36)");
+			if(bet < 0 || bet > 36) {
+				bet = readInt("Enter bet number(0 - 36)");
+			} else {
+				return bet;
+			}
+		}
 	}
 }
