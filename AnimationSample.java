@@ -14,7 +14,7 @@ public class AnimationSample extends GraphicsProgram {
 		int finalX = 200;
 		int vx = INITIAL_VELOCITY;
 		int vy = 0;
-		while(myRect.getX() != finalX) {
+		while(myRect.getX() <= finalX) {
 			myRect.move(vx, vy);
 			pause(PAUSE_ME);
 		}

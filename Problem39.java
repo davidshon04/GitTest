@@ -5,21 +5,20 @@ import acm.program.GraphicsProgram;
 //წერტილიდან მარჯვენა კედლამდე.
 
 public class Problem39 extends GraphicsProgram {
-	
+
 	private static final int RADIUS = 50;
-	
+
 	public void run() {
 		int initialX = getWidth() / 2 - RADIUS;
 		int initialY = getHeight() / 2 - RADIUS;
 		GOval ball = new GOval(2 * RADIUS, 2 * RADIUS);
 		add(ball, initialX, initialY);
 		ball.setFilled(true);
-		
+
 		int finalX = getWidth() - 2 * RADIUS;
-		while(ball.getX() < finalX) {
+		while (ball.getX() < finalX) {
 			ball.move(1, 0);
 			pause(5);
 		}
-		
 	}
 }
