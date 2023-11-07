@@ -11,7 +11,7 @@ public class Revision34 extends GraphicsProgram {
 
 	private static final int NUM_CIRCLES = 1000;
 	private static final int MIN_R = 10;
-	private static final int MAX_R = 100;
+	private static final int MAX_R = 30;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
