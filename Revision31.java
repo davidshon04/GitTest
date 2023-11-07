@@ -4,6 +4,7 @@ import acm.program.ConsoleProgram;
 
 public class Revision31 extends ConsoleProgram {
 	public void run() {
+		while(true){
 		int n = readInt("Enter number: ");
 		boolean isSimple = testSimple(n);
 		if(isSimple) {
@@ -12,7 +13,7 @@ public class Revision31 extends ConsoleProgram {
 			println("not Simple");
 		}
 	}
-
+	}
 	private boolean testSimple(int n) {
 		for (int i = 2; i < n; i++) {
 			if(n % i == 0) {
