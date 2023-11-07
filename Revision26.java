@@ -6,15 +6,23 @@ import acm.program.ConsoleProgram;
 public class Revision26 extends ConsoleProgram {
 	public void run() {
 		int a = readInt("Enter a: ");
+		if (a <= 0) {
+			println("a should be positive!");
+		}
+
 		int b = readInt("Enter b: ");
+		if (b <= 0) {
+			println("b should be positive!");
+		}
+
 		int gcd = gcdCounter(a, b);
 		println("GCD of the entered numbers is: " + gcd);
 	}
 
 	private int gcdCounter(int a, int b) {
 		int maybeGCD = Math.min(a, b);
-		for(int i = maybeGCD; i > 0; i--) {
-			if(a % i == 0 && b % i == 0) {
+		for (int i = maybeGCD; i > 0; i--) {
+			if (a % i == 0 && b % i == 0) {
 				maybeGCD = i;
 				break;
 			}
