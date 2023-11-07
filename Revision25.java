@@ -29,6 +29,6 @@ public class Revision25 extends ConsoleProgram {
 				break;
 			}
 		}
-		return -1;
+		return maybeLCM;
 	}
 }
