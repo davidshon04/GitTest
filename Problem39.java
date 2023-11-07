@@ -16,7 +16,7 @@ public class Problem39 extends GraphicsProgram {
 		ball.setFilled(true);
 		
 		int finalX = getWidth() - 2 * RADIUS;
-		while(initialX < finalX) {
+		while(ball.getX() < finalX) {
 			ball.move(1, 0);
 			pause(5);
 		}
