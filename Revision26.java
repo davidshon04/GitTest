@@ -6,12 +6,12 @@ import acm.program.ConsoleProgram;
 public class Revision26 extends ConsoleProgram {
 	public void run() {
 		int a = readInt("Enter a: ");
-		if (a <= 0) {
+		while (a <= 0) {
 			println("a should be positive!");
 		}
 
 		int b = readInt("Enter b: ");
-		if (b <= 0) {
+		while (b <= 0) {
 			println("b should be positive!");
 		}
 
