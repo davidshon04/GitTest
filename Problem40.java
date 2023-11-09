@@ -8,7 +8,7 @@ import acm.program.GraphicsProgram;
 
 public class Problem40 extends GraphicsProgram {
 	private static final int PAUSE_ME = 5;
-	private static final int INITIAL_VELOCITY = 1;
+	private static final int INITIAL_VELOCITY = 5;
 	private static final int RADIUS = 50;
 	
 	public void run() {
@@ -16,11 +16,9 @@ public class Problem40 extends GraphicsProgram {
 		int vx = INITIAL_VELOCITY;
 		int vy = 0;
 		while(true) {
-			if(circle.getX() >= getWidth() - 2 * RADIUS && circle.getX() != 0) {
+			if(circle.getX() >= getWidth() - 2 * RADIUS || circle.getX() < 0) {
 				vx = - vx;
-			} else if(circle.getX() == 0) {
-				vx = - vx;
-			}
+			} 
 			circle.move(vx, vy);
 			pause(PAUSE_ME);
 		}
