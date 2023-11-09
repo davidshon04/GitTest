@@ -10,22 +10,21 @@ public class GraphicsEventsSample extends GraphicsProgram {
 		GRect rect = new GRect(100, 100);
 		rect.setFilled(true);
 		add(rect);
-		
+
 		GRect rect2 = new GRect(100, 100);
 		rect2.setFilled(true);
 		add(rect2, 200, 200);
-		
+
 		addMouseListeners();
 	}
-	
+
 	public void mouseClicked(MouseEvent e) {
-//		e.getX();
-		
+
 		GObject obj = getElementAt(e.getX(), e.getY());
-		
-		if(obj != null) {
+
+		if (obj != null) {
 			obj.setColor(Color.RED);
-			
+
 		}
 	}
 }
