@@ -16,7 +16,7 @@ public class Problem40 extends GraphicsProgram {
 		int vx = INITIAL_VELOCITY;
 		int vy = 0;
 		while(true) {
-			if(circle.getX() >= getWidth() - 2 * RADIUS & circle.getX() != 0) {
+			if(circle.getX() >= getWidth() - 2 * RADIUS && circle.getX() != 0) {
 				vx = - vx;
 			} else if(circle.getX() == 0) {
 				vx = - vx;
