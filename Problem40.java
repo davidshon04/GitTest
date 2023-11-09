@@ -33,15 +33,3 @@ public class Problem40 extends GraphicsProgram {
 		return circle;
 	}
 }
-//int initialX = getWidth() / 2 - RADIUS;
-//int initialY = getHeight() / 2 - RADIUS;
-//GOval ball = new GOval(2 * RADIUS, 2 * RADIUS);
-//add(ball, initialX, initialY);
-//ball.setFilled(true);
-//
-//int finalX = getWidth() - 2 * RADIUS;
-//while (ball.getX() < finalX) {
-//	ball.move(1, 0);
-//	pause(5);
-//}
-//}
