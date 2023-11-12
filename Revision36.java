@@ -5,6 +5,7 @@ import acm.util.RandomGenerator;
 //	რამდენჯერ უნდა ავაგდოთ მონეტა რათა 3-ჯერ ზედიზედ ამოვიდეს ბორჯღალო.
 
 public class Revision36 extends ConsoleProgram {
+	
 	private static final int NUMBER_OF_TRIALS = 10000;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
