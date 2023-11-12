@@ -27,12 +27,12 @@ public class Revision36 extends ConsoleProgram {
 			int borjgali = rgen.nextInt(0, 1);
 			if (borjgali == 1) {
 				numBorjgali++;
+				if (numBorjgali == 3) {
+					break;
+				}
 			} else {
 				numBorjgali = 0;
-			}
-			if (numBorjgali == 3) {
-				break;
-			}
+			}	
 		}
 		return numFlips;
 	}
