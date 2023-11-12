@@ -15,7 +15,7 @@ public class Revision35 extends ConsoleProgram {
 			int numFlipsPerTrial = flipsPerTrial();
 			sumFlips += numFlipsPerTrial;
 		}
-		double averageFlips = sumFlips / NUMBER_OF_TRIALS;
+		double averageFlips = (double) sumFlips / NUMBER_OF_TRIALS;
 		println(averageFlips);
 	}
 
