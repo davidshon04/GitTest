@@ -15,6 +15,7 @@ public class Revision38 extends ConsoleProgram {
 
 	public void run() {
 		int balance = 1000;
+		println("The Starting Balance is: " + balance);
 		while (balance > 0) {
 			int betNumber = readBet();
 			int betValue = readInt("Enter how much money you bet");
