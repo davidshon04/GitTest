@@ -18,9 +18,9 @@ public class Revision38 extends ConsoleProgram {
 		println("The Starting Balance is: " + balance);
 		while (balance > 0) {
 			int betNumber = readBet();
-			int betValue = readInt("Enter how much money you bet");
+			int betValue = readInt("Enter how much money you bet: ");
 			while (betValue < 0 || betValue > balance) {
-				betValue = readInt("Look at your Balance!");
+				betValue = readInt("Look at your Balance! ");
 			}
 
 			int roulette = rouletteSimulation();
