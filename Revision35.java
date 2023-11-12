@@ -6,7 +6,7 @@ import acm.util.RandomGenerator;
 
 public class Revision35 extends ConsoleProgram {
 
-	private static final int NUMBER_OF_TRIALS = 10000;
+	private static final int NUMBER_OF_TRIALS = 10;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
