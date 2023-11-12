@@ -7,7 +7,7 @@ import acm.program.ConsoleProgram;
 public class Revision37 extends ConsoleProgram {
 	public void run() {
 		int n = readInt("Enter Number between 0 and 36: ");
-		while(n < 0 && n > 36) {
+		while(n < 0 || n > 36) {
 			n = readInt("Enter Number between 0 and 36: ");
 		}
 	}
