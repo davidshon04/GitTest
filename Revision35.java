@@ -5,14 +5,29 @@ import acm.util.RandomGenerator;
 //რამდენჯერ უნდა ავაგდოთ მონეტა რათა ამოვიდეს ბორჯღალო
 
 public class Revision35 extends ConsoleProgram {
-	
+
 	private static final int NUMBER_OF_TRIALS = 10000;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	
+
 	public void run() {
-//		int x = 3;
-//		for (int i = 0; i < NUMBER_OF_TRIALS; i++) {
-//			
-//		}
+		int sumFlips = 0;
+		for (int i = 0; i < NUMBER_OF_TRIALS; i++) {
+			int numFlipsPerTrial = flipsPerTrial();
+			sumFlips += numFlipsPerTrial;
+		}
+		int averageFlips = sumFlips / NUMBER_OF_TRIALS;
+		println(averageFlips);
+	}
+
+	private int flipsPerTrial() {
+		int numFlips = 0;
+		while (true) {
+			numFlips++;
+			int borjgali = rgen.nextInt(0, 1);
+			if (borjgali == 1) {
+				break;
+			}
+		}
+		return numFlips;
 	}
 }
