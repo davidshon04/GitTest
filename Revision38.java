@@ -17,7 +17,10 @@ public class Revision38 extends ConsoleProgram {
 		int balance = 1000;
 		while (balance > 0) {
 			int betNumber = readBet();
-			int betValue = readInt("Enter how much money you bet: ");
+			int betValue = readInt("Enter how much money you bet");
+			while (betValue < 0 || betValue > balance) {
+				betValue = readInt("Look at your Balance!");
+			}
 
 			int roulette = rouletteSimulation();
 			println("The winning number is: " + roulette);
@@ -36,12 +39,6 @@ public class Revision38 extends ConsoleProgram {
 			println(" ");
 		}
 	}
-
-	// private int readBetValue() {
-	// int n = readInt("Enter how much money you bet");
-	// while(n < 0 || n > balance)
-	// return 0;
-	// }
 
 	private int readBet() {
 		int n = readInt("Enter Number between 0 and 36: ");
