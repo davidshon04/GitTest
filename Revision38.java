@@ -40,6 +40,7 @@ public class Revision38 extends ConsoleProgram {
 				println("New balance is: " + balance);
 			}
 		}
+		println("Game Over!");
 	}
 
 	private int readBet() {
