@@ -30,14 +30,15 @@ public class Revision38 extends ConsoleProgram {
 				println("Winner!");
 				println("You won: " + 2 * betValue);
 				balance += betValue;
+				println(" ");
 				println("New balance is: " + balance);
 			} else {
 				println("Loser!");
 				println("You lost: " + betValue);
 				balance -= betValue;
+				println(" ");
 				println("New balance is: " + balance);
 			}
-			println(" ");
 		}
 	}
 
