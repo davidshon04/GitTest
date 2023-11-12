@@ -21,9 +21,9 @@ public class Revision36 extends ConsoleProgram {
 
 	private int flipsPerTrial() {
 		int numFlips = 0;
+		int numBorjgali = 0;
 		while (true) {
 			numFlips++;
-			int numBorjgali = 0;
 			int borjgali = rgen.nextInt(0, 1);
 			if (borjgali == 1) {
 				numBorjgali++;
