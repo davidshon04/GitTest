@@ -19,7 +19,7 @@ public class Revision40 extends GraphicsProgram {
 
 		int vx = VELOCITY;
 		while (true) {
-			if(circle.getX() + DIAMETER > getWidth() || circle.getX() < 0) {
+			if (circle.getX() + DIAMETER > getWidth() || circle.getX() < 0) {
 				vx = -vx;
 			}
 			circle.move(vx, 0);
