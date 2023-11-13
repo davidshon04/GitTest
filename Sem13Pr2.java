@@ -11,8 +11,8 @@ import acm.program.GraphicsProgram;
 public class Sem13Pr2 extends GraphicsProgram {
 	
 	private static final int DIAMETER = 50;
-	private static final int INITIAL_VELOCITY = 2;
-	private static final int GRAVITATION = 3;
+	private static final int INITIAL_VELOCITY = 1;
+	private static final int GRAVITATION = 2;
 	
 	public void run() {
 		GOval redBall = createRedBall();
@@ -22,7 +22,7 @@ public class Sem13Pr2 extends GraphicsProgram {
 		while (redBall.getY() < getHeight() - DIAMETER) {
 			redBall.move(vx, vy);
 			vy = vy + GRAVITATION;
-			pause(5);
+			pause(5000);
 		}
 	}
 
