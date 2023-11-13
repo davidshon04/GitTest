@@ -13,9 +13,9 @@ public class Revision39 extends GraphicsProgram {
 		add(circle, 0, getHeight() / 2 - DIAMETER / 2);
 		circle.setFilled(true);
 		
-		while (circle.getX() < getWidth() - DIAMETER) {
-			circle.move(1, 0);
-			pause(5);
-		}
+//		while (circle.getX() < getWidth() - DIAMETER) {
+//			circle.move(1, 0);
+//			pause(5);
+//		}
 	}
 }
