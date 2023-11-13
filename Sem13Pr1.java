@@ -1,4 +1,12 @@
+import acm.graphics.GLine;
+import acm.program.GraphicsProgram;
 
-public class Sem13Pr1 {
+//დაწერეთ გრაფიკული პროგრამა, რომლიც ეკრანის შუაში გაავლებს ჰორიზონტალურ ხაზს. 
+//ეკრანის ზომის ცვლილებისას ხაზი ყოველთვის ეკრანის შუაში უნდა იყოს, ეკრანის მთელს სიგრძეზე.
 
+public class Sem13Pr1 extends GraphicsProgram {
+	public void run() {
+		GLine line = new GLine(0, getHeight() / 2, getWidth(), getHeight() / 2);
+		add(line);
+	}
 }
