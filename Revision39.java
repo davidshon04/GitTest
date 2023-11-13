@@ -10,7 +10,7 @@ public class Revision39 extends GraphicsProgram {
 	
 	public void run() {
 		GOval circle = new GOval(DIAMETER, DIAMETER);
-		add(circle, getWidth() / 2 - DIAMETER / 2, getHeight() / 2 - DIAMETER / 2);
+		add(circle, 0, getHeight() / 2 - DIAMETER / 2);
 		circle.setFilled(true);
 		
 		while (circle.getX() < getWidth() - DIAMETER) {
