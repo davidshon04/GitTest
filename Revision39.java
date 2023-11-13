@@ -5,17 +5,17 @@ import acm.program.GraphicsProgram;
 //წერტილიდან მარჯვენა კედლამდე.
 
 public class Revision39 extends GraphicsProgram {
-	
+
 	private static final int DIAMETER = 50;
-	
+
 	public void run() {
 		GOval circle = new GOval(DIAMETER, DIAMETER);
 		add(circle, 0, getHeight() / 2 - DIAMETER / 2);
 		circle.setFilled(true);
-		
-//		while (circle.getX() < getWidth() - DIAMETER) {
-//			circle.move(1, 0);
-//			pause(5);
-//		}
+
+		while (circle.getX() < getWidth() - DIAMETER) {
+			circle.move(1, 0);
+			pause(5);
+		}
 	}
 }
