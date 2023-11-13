@@ -12,6 +12,7 @@ public class Sem13Pr1 extends GraphicsProgram {
 		while (true) {
 			remove(line);
 			line = new GLine(0, getHeight() / 2, getWidth(), getHeight() / 2);
+			add(line);
 			pause(20);
 		}
 	}
