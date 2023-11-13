@@ -22,7 +22,7 @@ public class Sem13Pr2 extends GraphicsProgram {
 		while (redBall.getY() < getHeight() - DIAMETER) {
 			redBall.move(vx, vy);
 			vy = vy + GRAVITATION;
-			pause(5000);
+			pause(50);
 		}
 	}
 
