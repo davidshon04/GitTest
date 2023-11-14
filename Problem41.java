@@ -13,13 +13,13 @@ public class Problem41 extends GraphicsProgram {
 		addMouseListeners();
 	}
 
-//	@Override
-//	public void mouseDragged(MouseEvent e) {
-//		addBrush(e.getX(), e.getY());
-//	}
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		addBrush(e.getX(), e.getY());
+	}
 	
 	@Override
-	public void mouseClicked(MouseEvent e) {
+	public void mousePressed(MouseEvent e) {
 		addBrush(e.getX(), e.getY());
 	}
 	
