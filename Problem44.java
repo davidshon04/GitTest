@@ -22,8 +22,7 @@ public class Problem44 extends GraphicsProgram {
 		while(true) {
 			circle.move(0, V_Y);
 			pause(DELAY);
-		}
-		
+		}	
 	}
 	
 	@Override
@@ -31,3 +30,4 @@ public class Problem44 extends GraphicsProgram {
 		add(circle, e.getX() - RADIUS, e.getY() - RADIUS);
 	}
 }
+//45-48.
