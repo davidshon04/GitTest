@@ -24,7 +24,7 @@ public class ObjMove extends GraphicsProgram{
 	public void mouseMoved(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
 		if(obj == rect) {
-			obj.move(e.getX() - prevX, 0);
+			rect.move(e.getX() - prevX, 0);
 		}
 		prevX = e.getX();
 
