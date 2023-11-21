@@ -5,7 +5,7 @@ import acm.program.ConsoleProgram;
 
 public class Problem47 extends ConsoleProgram {
 	public void run() {
-		String text = "airamzissizmariaairevaiveria";
+		String text = "airamzissizmaria";
 		boolean isPalindrom = isPalindrom(text);
 		println(text + " is Palindrom: " + isPalindrom);
 	}
