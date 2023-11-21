@@ -7,8 +7,8 @@ public class TokenizerSample extends ConsoleProgram {
 		String text = "markoza magaria, shermadini bandzia. basri gelitaevi";
 		// StringTokenizer tokenizer = new StringTokenizer(text);
 
-		//StringTokenizer tokenizer = new StringTokenizer(text, " .,");
-		
+		// StringTokenizer tokenizer = new StringTokenizer(text, " .,");
+
 		StringTokenizer tokenizer = new StringTokenizer(text, " .,", true);
 
 		while (tokenizer.hasMoreTokens()) {
