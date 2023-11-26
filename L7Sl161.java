@@ -9,7 +9,7 @@ public class L7Sl161 extends ConsoleProgram {
 	public void run() {
 		for (int i = 1; i <= MAX_NUM; i++) {
 			if (isSquare(i)) {
-				println(i + ", square of " + Math.sqrt(i));
+				println(i + ", square of " + (int) Math.sqrt(i));
 			}
 		}
 	}
