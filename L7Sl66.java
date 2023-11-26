@@ -5,7 +5,7 @@ import acm.program.ConsoleProgram;
 public class L7Sl66 extends ConsoleProgram {
 	public void run() {
 		double cms = metersToCms(5.7);
-		println(cms);
+		println(cms + " cm");
 	}
 
 	private double metersToCms(double d) {
