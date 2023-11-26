@@ -17,7 +17,7 @@ public class Dam6Pr2 extends ConsoleProgram{
 		} else if (symb == '*') {
 			println(n1 * n2);
 		} else if (symb == '/') {
-			println(n1 / n2);
+			println((double) n1 / (double) n2);
 		}
 	}
 }
