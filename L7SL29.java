@@ -8,8 +8,8 @@ public class L7SL29 extends ConsoleProgram {
 		println("Average is: " + average);
 	}
 
-	private double calculateAverage(double d, double e) {
-		double sum = d + e;
+	private double calculateAverage(double num1, double num2) {
+		double sum = num1 + num2;
 		double average = sum / 2;
 		return average;
 	}
