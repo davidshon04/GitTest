@@ -14,7 +14,7 @@ public class Dam8Pr2 extends GraphicsProgram {
 	private static final int SIZE = 450;
 	
 	public void run() {
-		GRect square = createSquare(SIZE, Color.YELLOW, true);
+		GRect square = createSquare(SIZE, Color.CYAN, true);
 		int x = (getWidth() - SIZE) / 2;
 		int y = (getHeight() - SIZE) / 2;
 		add(square, x, y);
