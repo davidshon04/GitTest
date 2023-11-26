@@ -4,7 +4,7 @@ import acm.program.ConsoleProgram;
 
 public class L7Sl161 extends ConsoleProgram {
 
-	private static final int MAX_NUM = 300;
+	private static final int MAX_NUM = 500;
 	
 	public void run() {
 		for (int i = 1; i <= MAX_NUM; i++) {
