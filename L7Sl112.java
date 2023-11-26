@@ -6,7 +6,10 @@ public class L7Sl112 extends ConsoleProgram {
 	public void run() {
 		int n = readInt("Enter number: ");
 		int factN = calculateFactorial(n);
-		println(factN);
+		
+		for (int i = 0; i <= n; i++) {
+			println(i + "! = " + factN);
+		}
 	}
 
 	private int calculateFactorial(int n) {
