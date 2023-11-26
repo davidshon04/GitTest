@@ -11,7 +11,7 @@ import acm.program.GraphicsProgram;
 
 public class Dam8Pr2 extends GraphicsProgram {
 	
-	private static final int SIZE = 450;
+	private static final int SIZE = 150;
 	
 	public void run() {
 		GRect square = createSquare(SIZE, Color.CYAN, false);
