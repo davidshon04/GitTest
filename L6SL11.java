@@ -5,7 +5,7 @@ public class L6SL11 extends ConsoleProgram {
 		int n = readInt("Enter number: ");
 		if (n == 0) {
 			println("The number is zero");
-		} else if (n > 0){
+		} else if (n > 0) {
 			println("The number isn't zero");
 			println("The number is positive Integer");
 		} else {
