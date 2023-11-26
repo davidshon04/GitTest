@@ -5,9 +5,7 @@ import acm.program.ConsoleProgram;
 public class L6Sl104 extends ConsoleProgram {
 	public void run() {
 		for (int i = 0; i < 100; i++) {
-			if (i % 2 == 0) {
-				println(i);
-			}
+			println(i * 2);
 		}
 	}
 }
