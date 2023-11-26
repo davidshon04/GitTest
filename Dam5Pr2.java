@@ -24,13 +24,13 @@ public class Dam5Pr2 extends GraphicsProgram {
 		window.setColor(Color.RED);
 		double x = (getWidth() - HOUSE_WIDTH) / 2;
 		double y = (getHeight() - HOUSE_HEIGHT) / 2 + 20;
-		add(window, x, y);
+		add(window, x + 10, y);
 		
 		window = new GRect(WINDOW_WIDTH, WINDOW_HEIGHT);
 		x = (getWidth() - HOUSE_WIDTH) / 2 + HOUSE_WIDTH - WINDOW_WIDTH;
 		window.setFilled(true);
 		window.setColor(Color.RED);
-		add(window, x, y);
+		add(window, x - 10, y);
 	}
 
 
