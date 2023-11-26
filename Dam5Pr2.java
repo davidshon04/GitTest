@@ -32,7 +32,10 @@ public class Dam5Pr2 extends GraphicsProgram {
 		window.setColor(Color.RED);
 		add(window, x - 10, y);
 		
-		GLine roofln = new GLine((getWidth() - HOUSE_WIDTH) / 2, (getHeight() - HOUSE_HEIGHT) / 2, getWidth() / 2, (getHeight() - HOUSE_HEIGHT) / 2 - 20);
+		GLine roofln = new GLine((getWidth() - HOUSE_WIDTH) / 2, (getHeight() - HOUSE_HEIGHT) / 2, getWidth() / 2, (getHeight() - HOUSE_HEIGHT) / 2 - 30);
+		add(roofln);
+		
+		roofln = new GLine(getWidth() / 2, (getHeight() - HOUSE_HEIGHT) / 2 - 30, (getWidth() - HOUSE_WIDTH) / 2 + HOUSE_WIDTH, (getHeight() - HOUSE_HEIGHT) / 2);
 		add(roofln);
 	}
 
