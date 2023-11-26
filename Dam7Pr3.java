@@ -16,6 +16,6 @@ public class Dam7Pr3 extends ConsoleProgram {
 				numDiv++;
 			}
 		}
-		println("The number has " + numDiv + "Divisors.");
+		println("The number has " + numDiv + " Divisors.");
 	}
 }
