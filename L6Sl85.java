@@ -1,5 +1,7 @@
 import acm.program.ConsoleProgram;
 
+//print a phrase 20 times.
+
 public class L6Sl85 extends ConsoleProgram {
 
 	private static final int NUM_LINES = 20;

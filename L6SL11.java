@@ -1,5 +1,7 @@
 import acm.program.ConsoleProgram;
 
+// enter number, program says whether it is zero, positive or negative
+
 public class L6SL11 extends ConsoleProgram {
 	public void run() {
 		int n = readInt("Enter number: ");

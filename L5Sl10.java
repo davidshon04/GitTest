@@ -1,5 +1,7 @@
 import acm.program.ConsoleProgram;
 
+// add two numbers from console
+
 public class L5Sl10 extends ConsoleProgram {
 	public void run() {
 		println("This program adds two Integers.");
