@@ -2,7 +2,7 @@ import acm.program.ConsoleProgram;
 
 public class L6Sl24 extends ConsoleProgram {
 	public void run() {
-		boolean lookingForLove = readBoolean("Looking for love?", "y", "n");
+		boolean lookingForLove = readBoolean("Looking for love?");
 		int x = 35;
 		if (lookingForLove) {
 			int y = 43;
