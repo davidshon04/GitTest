@@ -1,4 +1,23 @@
+import acm.program.ConsoleProgram;
 
-public class L7Sl112 {
+// create a method to calculate factorials
 
+public class L7Sl112 extends ConsoleProgram {
+	public void run() {
+		int n = readInt("Enter number: ");
+		int factN = calculateFactorial(n);
+		println(factN);
+	}
+
+	private int calculateFactorial(int n) {
+		int factorial = 1;
+		if ( n == 0) {
+			return 1;
+		} else {
+			for (int i = 1; i <= n; i++) {
+				factorial *= i;
+			}
+			return factorial;
+		}
+	}
 }
