@@ -11,8 +11,8 @@ public class Dam5Pr2 extends GraphicsProgram {
 	private static final int HOUSE_HEIGHT = 200;
 	private static final int DOOR_WIDTH = 50;
 	private static final int DOOR_HEIGHT = 70;
-	private static final int WINDOW_WIDTH = 50;
-	private static final int WINDOW_HEIGHT = 70;
+	private static final int WINDOW_WIDTH = 30;
+	private static final int WINDOW_HEIGHT = 50;
 
 
 	public void run() {
@@ -28,6 +28,8 @@ public class Dam5Pr2 extends GraphicsProgram {
 		
 		window = new GRect(WINDOW_WIDTH, WINDOW_HEIGHT);
 		x = (getWidth() - HOUSE_WIDTH) / 2 + HOUSE_WIDTH - WINDOW_WIDTH;
+		window.setFilled(true);
+		window.setColor(Color.RED);
 		add(window, x, y);
 	}
 
