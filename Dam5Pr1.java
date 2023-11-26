@@ -8,7 +8,7 @@ public class Dam5Pr1 extends GraphicsProgram {
 	public void run() {
 		double x = getWidth();
 		double y = getHeight();
-		String text = "width: " + x + ", height: " + y;
+		String text = "width: ";
 		GLabel str = new GLabel(text);
 		add(str, getWidth() / 2 - str.getWidth() / 2, getHeight() / - str.getAscent() / 2);
 	}
