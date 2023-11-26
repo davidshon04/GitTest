@@ -4,12 +4,13 @@ import acm.program.ConsoleProgram;
 
 public class L7Sl66 extends ConsoleProgram {
 	public void run() {
-		double cms = metersToCms(5.7);
-		println(cms + " cm");
+		println(metersToCms(5.9));
+		println(metersToCms(94.5));
+		println(metersToCms(0.1));
 	}
 
-	private double metersToCms(double d) {
-		double cms = d * 100;
+	private double metersToCms(double meters) {
+		double cms = meters * 100;
 		return cms;
 	}
 }
