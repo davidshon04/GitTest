@@ -16,7 +16,7 @@ public class Dam8Pr2 extends GraphicsProgram {
 	public void run() {
 		GRect square = createSquare(SIZE, Color.YELLOW, true);
 		int x = (getWidth() - SIZE) / 2;
-		int y = (getHeight() / - SIZE) / 2;
+		int y = (getHeight() - SIZE) / 2;
 		add(square, x, y);
 	}
 
