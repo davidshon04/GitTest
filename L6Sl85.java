@@ -6,7 +6,7 @@ public class L6Sl85 extends ConsoleProgram {
 	
 	public void run() {
 		for (int i = 0; i < NUM_LINES; i++) {
-			println("David is Cool!");
+			println("David is Cool!" + i + 1);
 		}
 	}
 }
