@@ -1,3 +1,5 @@
+import java.awt.Font;
+
 import acm.graphics.GLabel;
 import acm.program.GraphicsProgram;
 
@@ -10,6 +12,7 @@ public class Dam5Pr1 extends GraphicsProgram {
 		double y = getHeight();
 		String text = "width: " + x + ", height: " + y;
 		GLabel str = new GLabel(text);
+		str.setFont("London");
 		add(str, getWidth() / 2 - str.getWidth() / 2, getHeight() / 2 - str.getAscent() / 2);
 	}
 }
