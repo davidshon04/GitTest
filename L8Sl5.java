@@ -13,6 +13,7 @@ public class L8Sl5 extends ConsoleProgram {
 	}
 //	
 	private void cow(int grass){
+		grass+=4;
 		println(grass);
 	}
 //	private int calculateFactorial(int number) {
