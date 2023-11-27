@@ -6,7 +6,7 @@ public class L8Sl5 extends ConsoleProgram {
 	public void run() {
 		int n = readInt("Enter number of objects in the set: ");
 		int k = readInt("Enter number to be chosen: ");
-		double combin = calculateFactorial(n) / (calculateFactorial(k) * calculateFactorial(n - k));
+		int combin = calculateFactorial(n) / (calculateFactorial(k) * calculateFactorial(n - k));
 		println(combin);
 	}
 	
