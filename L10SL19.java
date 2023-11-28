@@ -4,10 +4,10 @@ import acm.program.GraphicsProgram;
 // bouncing ball
 
 public class L10SL19 extends GraphicsProgram {
-	
+
 	private static final int RADIUS = 30;
 	private static final int DELAY = 10;
-	
+
 	public void run() {
 		GOval ball = createBall();
 		int vx = 3;
