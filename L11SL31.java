@@ -20,7 +20,7 @@ public class L11SL31 extends GraphicsProgram {
 	public void mouseMoved(MouseEvent e) {
 		String coord = "Coordinates: " + square.getX() + ", " + square.getY();
 		GLabel label = new GLabel(coord);
-		add(label);
+		add(label, 50, 50);
 		double dx = e.getX() - square.getX() - SIZE / 2;
 		double dy = e.getY() - square.getY() - SIZE / 2;
 		square.move(dx, dy);
