@@ -17,7 +17,7 @@ public class Revision44 extends GraphicsProgram {
 	public void run() {
 		ball = createGravityBall();
 		addMouseListeners();
-		while (ball.getY() - 2 * RADIUS <= getHeight()) {
+		while (true) {
 			ball.move(0, vy);
 			pause(DELAY);
 		}
