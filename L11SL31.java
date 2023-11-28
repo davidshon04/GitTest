@@ -8,7 +8,7 @@ import acm.program.GraphicsProgram;
 
 public class L11SL31 extends GraphicsProgram {
 	
-	private static final int SIZE = 30;
+	private static final int SIZE = 50;
 	private GRect square;
 	
 	public void run() {
@@ -17,10 +17,11 @@ public class L11SL31 extends GraphicsProgram {
 	}
 	
 	public void mouseMoved(MouseEvent e) {
-		double dx = e.getX() - square.getX() - SIZE / 2;
-		double dy = e.getY() - square.getY() - SIZE / 2;
+		double dx = e.getX()  - SIZE / 2;
+		double dy = e.getY()  - SIZE / 2;
 		square.move(dx, dy);
 		pause(15);
+		//square.getX()	square.getY()
 	}
 
 	private GRect createSquare() {
