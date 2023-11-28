@@ -8,16 +8,16 @@ import acm.util.RandomGenerator;
 //ბურთს მოძრაობა დააწყებინეთ რანდომ მიმართულებით. კედლებთან დაჯახებისას ბურთი უნდა ირეკლებოდეს.
 
 public class Dam13Pr3 extends GraphicsProgram {
-	
+
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int DIAMETER = 40;
 	GOval circle;
-	
+
 	public void run() {
 		createCircle();
 		int vx = rgen.nextInt(2, 5);
 		int vy = rgen.nextInt(3, 7);
-		
+
 		while (true) {
 			if (circle.getY() + DIAMETER > getHeight() || circle.getY() < 0) {
 				vy = -vy;
@@ -29,7 +29,7 @@ public class Dam13Pr3 extends GraphicsProgram {
 			pause(20);
 		}
 	}
-	
+
 	private GOval createCircle() {
 		circle = new GOval(DIAMETER, DIAMETER);
 		circle.setFilled(true);
