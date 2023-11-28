@@ -17,15 +17,14 @@ public class Revision44 extends GraphicsProgram {
 	public void run() {
 		ball = createGravityBall();
 		addMouseListeners();
-	}
-
-	public void mouseClicked(MouseEvent e) {
-		ball = createGravityBall();
-		add(ball, e.getX() - RADIUS, e.getY() - RADIUS);
 		while (ball.getY() - 2 * RADIUS <= getHeight()) {
 			ball.move(0, vy);
 			pause(DELAY);
 		}
+	}
+
+	public void mouseClicked(MouseEvent e) {
+		add(ball, e.getX() - RADIUS, e.getY() - RADIUS);
 	}
 
 	private GOval createGravityBall() {
