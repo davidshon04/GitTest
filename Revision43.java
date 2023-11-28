@@ -29,7 +29,7 @@ public class Revision43 extends GraphicsProgram {
 	public void mouseDragged(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
 		if (obj != null) {
-			obj.move(e.getX() - obj.getX(), e.getY() - obj.getY());
+			obj.move(e.getX() - prevX, e.getY() - prevY);
 		}
 	}
 
