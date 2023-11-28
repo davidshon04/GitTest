@@ -20,12 +20,13 @@ public class GravitationBouncing extends GraphicsProgram {
 				redBall.move(vx, vy);
 				vy = vy + GRAVITATION;
 				pause(50);
-			} else {
-				redBall.move(vx, - VY_AFTER_BOUNCING * vy);
+			}
+			while (vy >= 0) {
+				redBall.move(vx, -VY_AFTER_BOUNCING * vy);
 				vy = vy - GRAVITATION;
 				pause(50);
 			}
-			
+
 		}
 	}
 
