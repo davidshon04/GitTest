@@ -1,38 +1,26 @@
 import java.awt.Color;
 import java.awt.event.MouseEvent;
-
-import acm.graphics.GLabel;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 // create square which moves along mouse
 
 public class L11SL31 extends GraphicsProgram {
-	
+
 	private static final int SIZE = 50;
 	private GRect square;
-	private String coord;
-	private GLabel label;
-	
+
 	public void run() {
 		square = createSquare();
 		addMouseListeners();
-		coord = "Coordinates: " + square.getX() + ", " + square.getY();
-		label = new GLabel(coord);
-		add(label, 50, 50);
 	}
-	
+
 	public void mouseMoved(MouseEvent e) {
 		double dx = e.getX() - square.getX() - SIZE / 2;
 		double dy = e.getY() - square.getY() - SIZE / 2;
-		
-		remove(label);
 		square.move(dx, dy);
-		
-		coord = "Coordinates: " + square.getX() + ", " + square.getY();
-		add(label, 50, 50);
 		pause(15);
-		
+
 	}
 
 	private GRect createSquare() {
