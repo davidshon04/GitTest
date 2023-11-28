@@ -14,10 +14,11 @@ public class L11SL31 extends GraphicsProgram {
 	
 	public void run() {
 		square = createSquare();
+		
+		addMouseListeners();
 		String coord = "Coordinates: " + square.getX() + ", " + square.getY();
 		GLabel label = new GLabel(coord);
 		add(label, 50, 50);
-		addMouseListeners();
 	}
 	
 	public void mouseMoved(MouseEvent e) {
