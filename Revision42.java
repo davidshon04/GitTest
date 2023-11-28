@@ -15,7 +15,7 @@ public class Revision42 extends GraphicsProgram {
 		addMouseListeners();
 	}
 	
-	public void mouseClicked(MouseEvent e) {
+	public void mousePressed(MouseEvent e) {
 		line = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
 		add(line);
 	}
