@@ -31,6 +31,8 @@ public class Revision43 extends GraphicsProgram {
 		if (obj != null) {
 			obj.move(e.getX() - prevX, e.getY() - prevY);
 		}
+		prevX = e.getX();
+		prevY = e.getY();
 	}
 
 	private GOval addCircle() {
