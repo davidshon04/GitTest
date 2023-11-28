@@ -5,7 +5,7 @@ import acm.program.GraphicsProgram;
 
 public class GravitationBouncing extends GraphicsProgram {
 
-	private static final int DIAMETER = 30;
+	private static final int DIAMETER = 50;
 	private static final int INITIAL_VELOCITY = 1;
 	private static final int GRAVITATION = 2;
 	private static final double VY_AFTER_BOUNCING = 0.5;
