@@ -7,7 +7,7 @@ public class L10SL12 extends GraphicsProgram {
 
 	private static final int SQ_SIZE = 100;
 	private static final int DX = 3;
-	private static final int DELAY = 1000;
+	private static final int DELAY = 10;
 
 	public void run() {
 		GRect square = createSquare();
