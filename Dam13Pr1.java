@@ -10,6 +10,7 @@ public class Dam13Pr1 extends GraphicsProgram {
 		while(true) {
 			remove(line);
 			createLine();
+			pause(20);
 		}
 	}
 
