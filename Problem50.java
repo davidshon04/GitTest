@@ -7,11 +7,15 @@ import acm.program.ConsoleProgram;
 public class Problem50 extends ConsoleProgram {
 	public void run() {
 		String text = readLine("Enter text: ");
+		
+		String substr = text.substring(2);
+		println(substr);
 		StringTokenizer tokenizer = new StringTokenizer(text);
 		
 		int wordCount = 0;
 		while (tokenizer.hasMoreTokens()) {
-			String currToken = tokenizer.nextToken();
+//			String currToken = tokenizer.nextToken();
+			tokenizer.nextToken();
 			wordCount++;
 		}
 		println("Count: " + wordCount);
