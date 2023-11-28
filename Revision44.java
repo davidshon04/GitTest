@@ -10,7 +10,7 @@ import acm.program.GraphicsProgram;
 public class Revision44 extends GraphicsProgram {
 
 	private GOval ball;
-	private static int vy = 2;
+	private static int VY = 2;
 	private static int DELAY = 10;
 	private static final int RADIUS = 20;
 
@@ -18,7 +18,7 @@ public class Revision44 extends GraphicsProgram {
 		ball = createGravityBall();
 		addMouseListeners();
 		while (true) {
-			ball.move(0, vy);
+			ball.move(0, VY);
 			pause(DELAY);
 		}
 	}
