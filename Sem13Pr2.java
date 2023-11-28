@@ -19,7 +19,7 @@ public class Sem13Pr2 extends GraphicsProgram {
 		int vx = 0;
 		int vy = INITIAL_VELOCITY;
 		
-		while (redBall.getY() < getHeight() - DIAMETER) {
+		while (redBall.getY() <= getHeight() - DIAMETER) {
 			redBall.move(vx, vy);
 			vy = vy + GRAVITATION;
 			pause(50);
