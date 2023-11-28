@@ -14,6 +14,10 @@ public class Revision44 extends GraphicsProgram {
 
 	public void run() {
 		ball = createGravityBall();
+		while (ball.getY() - 40 >= getHeight()) {
+			ball.move(0, vy);
+			pause(DELAY);
+		}
 		// addMouseListeners();
 	}
 
@@ -22,10 +26,6 @@ public class Revision44 extends GraphicsProgram {
 		ball.setFilled(true);
 		ball.setColor(Color.YELLOW);
 		add(ball);
-		while (ball.getY() - 40 >= getHeight()) {
-			ball.move(0, vy);
-			pause(DELAY);
-		}
 		return ball;
 	}
 }
