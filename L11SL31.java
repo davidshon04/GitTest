@@ -11,13 +11,14 @@ public class L11SL31 extends GraphicsProgram {
 	
 	private static final int SIZE = 50;
 	private GRect square;
+	private String coord;
+	private GLabel label;
 	
 	public void run() {
 		square = createSquare();
-		
 		addMouseListeners();
-		String coord = "Coordinates: " + square.getX() + ", " + square.getY();
-		GLabel label = new GLabel(coord);
+		coord = "Coordinates: " + square.getX() + ", " + square.getY();
+		label = new GLabel(coord);
 		add(label, 50, 50);
 	}
 	
@@ -25,6 +26,8 @@ public class L11SL31 extends GraphicsProgram {
 		double dx = e.getX() - square.getX() - SIZE / 2;
 		double dy = e.getY() - square.getY() - SIZE / 2;
 		square.move(dx, dy);
+		remove(label);
+		add(label, 50, 50);
 		pause(15);
 	}
 
