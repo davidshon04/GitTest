@@ -1,4 +1,42 @@
+import java.awt.Color;
 
-public class GravitationBouncing {
+import acm.graphics.GOval;
+import acm.program.GraphicsProgram;
+
+public class GravitationBouncing extends GraphicsProgram {
+
+	private static final int DIAMETER = 30;
+	private static final int INITIAL_VELOCITY = 1;
+	private static final int GRAVITATION = 2;
+	private static final double VY_AFTER_BOUNCING = 0.9;
+
+	public void run() {
+		GOval redBall = createRedBall();
+		int vx = 1;
+		int vy = INITIAL_VELOCITY;
+
+		while (true) {
+			if (redBall.getY() <= getHeight() - DIAMETER) {
+				redBall.move(vx, vy);
+				vy = vy + GRAVITATION;
+				pause(50);
+			} else {
+				redBall.move(vx, - VY_AFTER_BOUNCING * vy);
+				vy = vy - GRAVITATION;
+				pause(50);
+			}
+			
+		}
+	}
+
+	private GOval createRedBall() {
+		GOval redBall = new GOval(DIAMETER, DIAMETER);
+		int x = 0;
+		int y = 0;
+		redBall.setFilled(true);
+		redBall.setColor(Color.RED);
+		add(redBall, x, y);
+		return redBall;
+	}
 
 }
