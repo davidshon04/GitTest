@@ -6,17 +6,13 @@ import acm.program.GraphicsProgram;
 
 public class Dam13Pr1 extends GraphicsProgram {
 	public void run() {
-		GLine line = createLine();
-		while(true) {
-			remove(line);
-			createLine();
-			pause(20);
-		}
-	}
-
-	private GLine createLine() {
 		GLine line = new GLine(0, getHeight() / 2, getWidth(), getHeight() / 2);
 		add(line);
-		return line;
+		while (true) {
+			remove(line);
+			line = new GLine(0, getHeight() / 2, getWidth(), getHeight() / 2);
+			add(line);
+			pause(20);
+		}
 	}
 }
