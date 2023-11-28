@@ -14,7 +14,7 @@ public class Revision44 extends GraphicsProgram {
 
 	public void run() {
 		ball = createGravityBall();
-		while (ball.getY() - 40 >= getHeight()) {
+		while (ball.getY() - 40 <= getHeight()) {
 			ball.move(0, vy);
 			pause(DELAY);
 		}
