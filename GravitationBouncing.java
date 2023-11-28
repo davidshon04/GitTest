@@ -9,6 +9,7 @@ public class GravitationBouncing extends GraphicsProgram {
 	private static final int INITIAL_VELOCITY = 1;
 	private static final int GRAVITATION = 2;
 	private static final double VY_AFTER_BOUNCING = 0.5;
+	private static final int DELAY = 10;
 
 	public void run() {
 		GOval redBall = createRedBall();
@@ -19,12 +20,12 @@ public class GravitationBouncing extends GraphicsProgram {
 			if (redBall.getY() <= getHeight() - DIAMETER) {
 				redBall.move(vx, vy);
 				vy = vy + GRAVITATION;
-				pause(50);
+				pause(DELAY);
 			} else {
 				while (vy >= 0) {
 					redBall.move(vx, -VY_AFTER_BOUNCING * vy);
 					vy = vy - GRAVITATION;
-					pause(50);
+					pause(DELAY);
 				}
 			}
 		}
