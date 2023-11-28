@@ -27,6 +27,7 @@ public class L11SL31 extends GraphicsProgram {
 		double dy = e.getY() - square.getY() - SIZE / 2;
 		square.move(dx, dy);
 		remove(label);
+		coord = "Coordinates: " + square.getX() + ", " + square.getY();
 		add(label, 50, 50);
 		pause(15);
 	}
