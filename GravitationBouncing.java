@@ -15,18 +15,18 @@ public class GravitationBouncing extends GraphicsProgram {
 		int vx = 1;
 		int vy = INITIAL_VELOCITY;
 
-		while (true) {
+		while (redBall.getX() + DIAMETER <= getWidth()) {
 			if (redBall.getY() <= getHeight() - DIAMETER) {
 				redBall.move(vx, vy);
 				vy = vy + GRAVITATION;
 				pause(50);
+			} else {
+				while (vy >= 0) {
+					redBall.move(vx, -VY_AFTER_BOUNCING * vy);
+					vy = vy - GRAVITATION;
+					pause(50);
+				}
 			}
-//			while (vy >= 0) {
-//				redBall.move(vx, -VY_AFTER_BOUNCING * vy);
-//				vy = vy - GRAVITATION;
-//				pause(50);
-//			}
-
 		}
 	}
 
