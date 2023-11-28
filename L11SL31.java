@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 
+import acm.graphics.GLabel;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
@@ -17,11 +18,13 @@ public class L11SL31 extends GraphicsProgram {
 	}
 	
 	public void mouseMoved(MouseEvent e) {
-		double dx = e.getX()  - SIZE / 2;
-		double dy = e.getY()  - SIZE / 2;
+		String coord = "Coordinates: " + square.getX() + ", " + square.getY();
+		GLabel label = new GLabel(coord);
+		add(label);
+		double dx = e.getX() - square.getX() - SIZE / 2;
+		double dy = e.getY() - square.getY() - SIZE / 2;
 		square.move(dx, dy);
 		pause(15);
-		//square.getX()	square.getY()
 	}
 
 	private GRect createSquare() {
