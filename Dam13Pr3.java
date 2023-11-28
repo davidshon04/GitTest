@@ -16,7 +16,7 @@ public class Dam13Pr3 extends GraphicsProgram {
 	public void run() {
 		createCircle();
 		int vx = rgen.nextInt(2, 5);
-		int vy = rgen.nextInt(2, 5);
+		int vy = rgen.nextInt(3, 7);
 		
 		while (true) {
 			if (circle.getY() + DIAMETER > getHeight() || circle.getY() < 0) {
