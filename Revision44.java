@@ -7,14 +7,14 @@ import acm.program.GraphicsProgram;
 //ადგილზე ვაკლიკებ ბურთი გადადის ახალ ადგილზე და იქედან იწყებს ვარდნას
 
 public class Revision44 extends GraphicsProgram {
-	
+
 	private GOval ball;
 	private static int vy = 2;
 	private static int DELAY = 10;
-	
+
 	public void run() {
 		ball = createGravityBall();
-	//	addMouseListeners();
+		// addMouseListeners();
 	}
 
 	private GOval createGravityBall() {
@@ -22,8 +22,10 @@ public class Revision44 extends GraphicsProgram {
 		ball.setFilled(true);
 		ball.setColor(Color.YELLOW);
 		add(ball);
-		ball.move(0, vy);
-		pause(DELAY);
+		while (ball.getY() - 40 >= getHeight()) {
+			ball.move(0, vy);
+			pause(DELAY);
+		}
 		return ball;
 	}
 }
