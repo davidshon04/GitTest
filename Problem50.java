@@ -8,7 +8,7 @@ public class Problem50 extends ConsoleProgram {
 	public void run() {
 		String text = readLine("Enter text: ");
 		
-		String substr = text.substring(2);
+		String substr = text.substring(2, 10);
 		println(substr);
 		StringTokenizer tokenizer = new StringTokenizer(text);
 		
