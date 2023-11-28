@@ -8,11 +8,11 @@ public class GravitationBouncing extends GraphicsProgram {
 	private static final int DIAMETER = 30;
 	private static final int INITIAL_VELOCITY = 1;
 	private static final int GRAVITATION = 2;
-	private static final double VY_AFTER_BOUNCING = 0.9;
+	private static final double VY_AFTER_BOUNCING = 0.5;
 
 	public void run() {
 		GOval redBall = createRedBall();
-		int vx = 1;
+		int vx = 3;
 		int vy = INITIAL_VELOCITY;
 
 		while (redBall.getX() + DIAMETER <= getWidth()) {
