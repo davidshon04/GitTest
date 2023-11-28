@@ -15,7 +15,7 @@ public class Revision41 extends GraphicsProgram {
 		addMouseListeners();
 	}
 	
-	public void mouseMoved(MouseEvent e) {
+	public void mouseDragged(MouseEvent e) {
 		circle = new GOval(2 * RADIUS, 2 * RADIUS);
 		circle.setFilled(true);
 		add(circle, e.getX() - RADIUS, e.getY() - RADIUS);
