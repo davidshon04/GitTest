@@ -25,11 +25,13 @@ public class L11SL31 extends GraphicsProgram {
 	public void mouseMoved(MouseEvent e) {
 		double dx = e.getX() - square.getX() - SIZE / 2;
 		double dy = e.getY() - square.getY() - SIZE / 2;
+		while (true) {
 		square.move(dx, dy);
 		remove(label);
 		coord = "Coordinates: " + square.getX() + ", " + square.getY();
 		add(label, 50, 50);
 		pause(15);
+		}
 	}
 
 	private GRect createSquare() {
