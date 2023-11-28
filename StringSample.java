@@ -11,6 +11,10 @@ public class StringSample extends ConsoleProgram {
 		println("1, 3, " + (str1 == str3) + " " + str1.equals(str3));
 		println("1, 4, " + (str1 == str4) + " " + str1.equals(str4));
 		// == - address; equals - string literals.
+		
+		
+		char ch = 'a';
+		Character.isDigit(ch);
 	}
 
 }

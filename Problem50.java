@@ -8,8 +8,12 @@ public class Problem50 extends ConsoleProgram {
 	public void run() {
 		String text = readLine("Enter text: ");
 		
-		String substr = text.substring(2, 10);
-		println(substr);
+//		String substr = text.substring(2, 10);
+//		println(substr);
+		
+//		int index = text.indexOf("ari");
+//		String mariWithoutM = text.substring(0, index);
+		
 		StringTokenizer tokenizer = new StringTokenizer(text);
 		
 		int wordCount = 0;
