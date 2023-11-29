@@ -11,7 +11,7 @@ public class CharSample extends ConsoleProgram {
 			println("It's not a letter.");
 		}
 		
-		// determine the symbol is uppercase or not
+		// determine the symbol (if it's a letter) is uppercase or not
 		if (Character.isUpperCase(firstCh)) {
 			println("UpperCase");
 			println(firstCh + "-->" + Character.toLowerCase(firstCh));
