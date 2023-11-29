@@ -4,13 +4,11 @@ import acm.program.ConsoleProgram;
 
 public class L12SL80 extends ConsoleProgram {
 	public void run() {
-		while(true){
 		String text = readLine("Enter text: ");
 		if (isPalyndrome(text)) {
 			println("Palyndrome");
 		} else {
 			println("just a text");
-		}
 		}
 	}
 
