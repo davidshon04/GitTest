@@ -8,7 +8,7 @@ public class Revision45 extends ConsoleProgram {
 		String text = readLine("Enter text: ");
 		String symbol = readLine("Enter symbol: ");
 		char symb = symbol.charAt(0);
-		
+
 		int chFreq = 0;
 		for (int i = 0; i < text.length(); i++) {
 			if (text.charAt(i) == symb) {
