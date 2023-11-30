@@ -25,22 +25,23 @@ public class Dam20Pr1 extends GraphicsProgram {
 		circle = createCircle();
 	}
 	
-	public void mouseClicked(MouseEvent e) {
-		GObject obj = getElementAt(e.getX(), e.getY());
-		int vx = rgen.nextInt(V_MIN, V_MAX);
-		int vy = rgen.nextInt(V_MIN, V_MAX);
-		if (obj != null) {
-			while (true) {
-				if (circle.getX() < 0 || circle.getX() + 2 * radius > getWidth()) {
-					vx = -vx;
-				}
-				if (circle.getY() < 0 || circle.getY() + 2 * radius > getHeight()) {
-					vy = -vy;
-				}
-				circle.move(vx, vy);
-			}
-		}
-	}
+//	public void mouseClicked(MouseEvent e) {
+//		GObject obj = getElementAt(e.getX(), e.getY());
+//		int vx = rgen.nextInt(V_MIN, V_MAX);
+//		int vy = rgen.nextInt(V_MIN, V_MAX);
+//		if (obj != null) {
+//			while (true) {
+//				if (circle.getX() < 0 || circle.getX() + 2 * radius > getWidth()) {
+//					vx = -vx;
+//				}
+//				if (circle.getY() < 0 || circle.getY() + 2 * radius > getHeight()) {
+//					vy = -vy;
+//				}
+//				circle.move(vx, vy);
+//				pause(30);
+//			}
+//		}
+//	}
 
 	private GOval createCircle() {
 		radius = rgen.nextDouble(MIN_RADIUS, MAX_RADIUS);
