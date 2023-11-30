@@ -11,7 +11,7 @@ import acm.util.RandomGenerator;
 //ყოველ ახალ ქლიქზე სიჩქარე რენდომად უნდა იცვლებოდეს. კედლებთან შეჯახებისას ბურთი უნდა ისხლიტებოდეს.
 
 public class Dam20Pr1 extends GraphicsProgram {
-	
+
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int MIN_RADIUS = 10;
 	private static final int MAX_RADIUS = 60;
@@ -22,23 +22,27 @@ public class Dam20Pr1 extends GraphicsProgram {
 	private int vx = 0;
 	private int vy = 0;
 	private static final int DELAY = 100;
-	
+
 	public void run() {
 		addMouseListeners();
 		circle = createCircle();
-		
+
 		while (true) {
-			if (circle.getX() < 0 || circle.getX() + circle.getWidth() > getWidth()) {
-				vx = -vx;
+			if (circle.getX() < 0) {
+				vx = Math.abs(vx);
+			} else if (circle.getX() + circle.getWidth() > getWidth()) {
+				vx = -Math.abs(vx);
 			}
-			if (circle.getY() < 0 || circle.getY() + circle.getHeight() > getHeight()) {
-				vy = -vy;
+			if (circle.getY() < 0) {
+				vy = Math.abs(vy);
+			} else if (circle.getY() + circle.getHeight() > getHeight()) {
+				vy = -Math.abs(vy);
 			}
 			circle.move(vx, vy);
 			pause(DELAY);
 		}
 	}
-	
+
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
@@ -61,7 +65,7 @@ public class Dam20Pr1 extends GraphicsProgram {
 		add(circle, x, y);
 		return circle;
 	}
-	
+
 	private int getRandomSpeed() {
 		int v = rgen.nextInt(V_MIN, V_MAX);
 		boolean negSpeed = rgen.nextBoolean();
