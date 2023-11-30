@@ -15,36 +15,43 @@ public class Dam20Pr1 extends GraphicsProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int MIN_RADIUS = 10;
 	private static final int MAX_RADIUS = 60;
-	private GOval circle;
-	private double radius;
+	private GOval circle = null;
+
 	private static final int V_MIN = 1;
 	private static final int V_MAX = 5;
+	private int vx = 0;
+	private int vy = 0;
+	private static final int DELAY = 100;
 	
 	public void run() {
 		addMouseListeners();
 		circle = createCircle();
+		
+		while (true) {
+			circle.move(vx, vy);
+			pause(DELAY);
+		}
 	}
 	
+	@Override
 	public void mouseClicked(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
-		int vx = rgen.nextInt(V_MIN, V_MAX);
-		int vy = rgen.nextInt(V_MIN, V_MAX);
 		if (obj != null) {
+			vx = getRandomSpeed();
+			vy = getRandomSpeed();
 			while (true) {
-				if (circle.getX() < 0 || circle.getX() + 2 * radius > getWidth()) {
+				if (circle.getX() < 0 || circle.getX() + circle.getWidth() > getWidth()) {
 					vx = -vx;
 				}
-				if (circle.getY() < 0 || circle.getY() + 2 * radius > getHeight()) {
+				if (circle.getY() < 0 || circle.getY() + circle.getHeight() > getHeight()) {
 					vy = -vy;
 				}
-				obj.move(vx, vy);
-				pause(30);
 			}
 		}
 	}
 
 	private GOval createCircle() {
-		radius = rgen.nextDouble(MIN_RADIUS, MAX_RADIUS);
+		double radius = rgen.nextDouble(MIN_RADIUS, MAX_RADIUS);
 		circle = new GOval(2 * radius, 2 * radius);
 		circle.setFilled(true);
 		Color color = rgen.nextColor();
@@ -53,5 +60,14 @@ public class Dam20Pr1 extends GraphicsProgram {
 		double y = rgen.nextDouble(0.0, getHeight() - 2 * radius);
 		add(circle, x, y);
 		return circle;
+	}
+	
+	private int getRandomSpeed() {
+		int v = rgen.nextInt(V_MIN, V_MAX);
+		boolean negSpeed = rgen.nextBoolean();
+		if (negSpeed) {
+			v = -v;
+		}
+		return v;
 	}
 }
