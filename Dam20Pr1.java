@@ -28,6 +28,12 @@ public class Dam20Pr1 extends GraphicsProgram {
 		circle = createCircle();
 		
 		while (true) {
+			if (circle.getX() < 0 || circle.getX() + circle.getWidth() > getWidth()) {
+				vx = -vx;
+			}
+			if (circle.getY() < 0 || circle.getY() + circle.getHeight() > getHeight()) {
+				vy = -vy;
+			}
 			circle.move(vx, vy);
 			pause(DELAY);
 		}
@@ -41,14 +47,6 @@ public class Dam20Pr1 extends GraphicsProgram {
 			vy = getRandomSpeed();
 			Color color = rgen.nextColor();
 			circle.setColor(color);
-//			while (true) {
-//				if (circle.getX() < 0 || circle.getX() + circle.getWidth() > getWidth()) {
-//					vx = -vx;
-//				}
-//				if (circle.getY() < 0 || circle.getY() + circle.getHeight() > getHeight()) {
-//					vy = -vy;
-//				}
-//			}
 		}
 	}
 
