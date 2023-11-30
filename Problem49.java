@@ -7,7 +7,7 @@ import acm.program.ConsoleProgram;
 
 public class Problem49 extends ConsoleProgram {
 	public void run() {
-		String numStr = "4747474747474748";
+		String numStr = "47474";
 		int num = stringToInt(numStr);
 		println(num);
 		// Math.pow(num, num)
