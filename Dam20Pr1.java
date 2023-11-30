@@ -39,14 +39,16 @@ public class Dam20Pr1 extends GraphicsProgram {
 		if (obj != null) {
 			vx = getRandomSpeed();
 			vy = getRandomSpeed();
-			while (true) {
-				if (circle.getX() < 0 || circle.getX() + circle.getWidth() > getWidth()) {
-					vx = -vx;
-				}
-				if (circle.getY() < 0 || circle.getY() + circle.getHeight() > getHeight()) {
-					vy = -vy;
-				}
-			}
+			Color color = rgen.nextColor();
+			circle.setColor(color);
+//			while (true) {
+//				if (circle.getX() < 0 || circle.getX() + circle.getWidth() > getWidth()) {
+//					vx = -vx;
+//				}
+//				if (circle.getY() < 0 || circle.getY() + circle.getHeight() > getHeight()) {
+//					vy = -vy;
+//				}
+//			}
 		}
 	}
 
