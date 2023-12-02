@@ -20,7 +20,7 @@ public class PP7 extends ConsoleProgram {
 			int perExperimentBalance = holdExperiment(startingBalance);
 			totalBalance += perExperimentBalance;
 		}
-		double averageBalance = (double) (totalBalance / NUM_EXPERIMENT);
+		double averageBalance = (double) totalBalance / NUM_EXPERIMENT;
 		println(averageBalance);
 	}
 
