@@ -23,7 +23,7 @@ public class PP5 extends ConsoleProgram {
 			int numCh = 0;
 			if (isFirstOccurence(ch, text1, i)) {
 				for (int j = 0; j < text1.length(); j++) {
-					if (text1.charAt(i) == ch) {
+					if (text1.charAt(j) == ch) {
 						numCh++;
 					}
 				}
