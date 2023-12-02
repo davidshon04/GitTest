@@ -10,21 +10,32 @@ import acm.util.RandomGenerator;
 public class PP7 extends ConsoleProgram {
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private static final int NUM_FLIPS = 10;
+	private static final int NUM_FLIPS = 100;
+	private static final int NUM_EXPERIMENT = 10000;
 	
 	public void run() {
-		int totalCashBalance = 20;
+		int startingBalance = 20;
+		int totalBalance = 0;
+		for (int i = 0; i < NUM_EXPERIMENT; i++) {
+			int perExperimentBalance = holdExperiment(startingBalance);
+			totalBalance += perExperimentBalance;
+		}
+		double averageBalance = totalBalance / NUM_EXPERIMENT;
+		println(averageBalance);
+	}
+
+	private int holdExperiment(int startingBalance) {
 		for (int i = 0; i < NUM_FLIPS; i++) {
 			boolean gerbi = rgen.nextBoolean();
 			if(gerbi) {
-				totalCashBalance += 1;
+				startingBalance += 1;
 			} else {
-				totalCashBalance -= 2;
-				if (totalCashBalance <= 0) {
+				startingBalance -= 2;
+				if (startingBalance <= 0) {
 					break;
 				}
 			}
 		}
-		println(totalCashBalance);
+		return startingBalance;
 	}
 }
