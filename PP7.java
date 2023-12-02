@@ -26,14 +26,14 @@ public class PP7 extends ConsoleProgram {
 
 	private int holdExperiment(int startingBalance) {
 		for (int i = 0; i < NUM_FLIPS; i++) {
+			if (startingBalance <= 0) {
+				break;
+			}
 			boolean gerbi = rgen.nextBoolean();
 			if(gerbi) {
 				startingBalance += 1;
 			} else {
 				startingBalance -= 2;
-				if (startingBalance <= 0) {
-					break;
-				}
 			}
 		}
 		return startingBalance;
