@@ -21,13 +21,13 @@ public class PP5 extends ConsoleProgram {
 		for (int i = 0; i < text1.length(); i++) {
 			char ch = text1.charAt(i);
 			int numCh = 0;
-			if (isFirstOccurence(ch, text1, i)) {
-				for (int j = 0; j < text1.length(); j++) {
-					if (text1.charAt(j) == ch) {
-						numCh++;
-					}
+			// if (isFirstOccurence(ch, text1, i)) {
+			for (int j = 0; j < text1.length(); j++) {
+				if (text1.charAt(j) == ch) {
+					numCh++;
 				}
 			}
+			// }
 			int statistics = numCh;
 			if (text2.contains("" + ch)) {
 				for (int k = 0; k < text2.length(); k++) {
@@ -43,10 +43,10 @@ public class PP5 extends ConsoleProgram {
 		return true;
 	}
 
-	private boolean isFirstOccurence(char ch, String text1, int i) {
-		if(text1.indexOf(ch) == i) {
-			return true;
-		}
-		return false;
-	}
+	// private boolean isFirstOccurence(char ch, String text1, int i) {
+	// if(text1.indexOf(ch) == i) {
+	// return true;
+	// }
+	// return false;
+	// }
 }
