@@ -10,11 +10,12 @@ import acm.program.ConsoleProgram;
 
 public class PP3 extends ConsoleProgram {
 	public void run() {
-		String text = "i have A pEN";
+		while(true){
+		String text = readLine("Enter text: ");
 		String correction = correctText(text);
 		println(correction);
 	}
-	
+	}
 	private String correctText(String text) {
 		String newText = "";
 		StringTokenizer tok = new StringTokenizer(text);
