@@ -10,7 +10,7 @@ import acm.util.RandomGenerator;
 public class PP7 extends ConsoleProgram {
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	private static final int NUM_FLIPS = 100;
+	private static final int NUM_FLIPS = 100000;
 	
 	public void run() {
 		int totalCashBalance = 20;
