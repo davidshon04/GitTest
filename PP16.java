@@ -10,9 +10,9 @@ public class PP16 extends ConsoleProgram {
 		int a = readInt("Enter number: ");
 		int q = readInt("Enter number: ");
 
-		for(int i = 0; i < n; i++) {
-			println("number " + (i+1) + " = " + a * Math.pow(q, i));
+		for (int i = 0; i < n; i++) {
+			println("number " + (i + 1) + " = " + a * Math.pow(q, i));
 		}
 	}
-	
+
 }
