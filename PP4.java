@@ -11,21 +11,20 @@ import acm.program.ConsoleProgram;
 
 public class PP4 extends ConsoleProgram {
 	public void run() {
-		while(true){
 		String text = readLine("Ennter text: ");
 		String correctedText = correctText(text);
 		println(correctedText);
-	}}
+	}
 
 	private String correctText(String text) {
 		String newText = "";
 		StringTokenizer tok = new StringTokenizer(text);
-		while(tok.hasMoreTokens()) {
+		while (tok.hasMoreTokens()) {
 			String currToken = tok.nextToken();
 			String reversed = reverseTok(currToken);
 			newText += (reversed + " ");
 		}
-		return newText;
+		return newText.substring(0, newText.length() - 1);
 	}
 
 	private String reverseTok(String currToken) {
