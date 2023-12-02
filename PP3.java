@@ -23,7 +23,7 @@ public class PP3 extends ConsoleProgram {
 			String correctToken = tokenCorrector(currToken);
 			newText += (correctToken + " ");
 		}
-		return newText;
+		return newText.substring(0, newText.length() - 1);
 	}
 
 	private String tokenCorrector(String currToken) {
