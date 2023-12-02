@@ -20,7 +20,7 @@ public class PP7 extends ConsoleProgram {
 				totalCashBalance += 1;
 			} else {
 				totalCashBalance -= 2;
-				if (totalCashBalance == 0) {
+				if (totalCashBalance <= 0) {
 					break;
 				}
 			}
