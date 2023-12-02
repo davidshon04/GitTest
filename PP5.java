@@ -28,14 +28,15 @@ public class PP5 extends ConsoleProgram {
 					}
 				}
 			}
+			int statistics = numCh;
 			if (text2.contains("" + ch)) {
 				for (int k = 0; k < text2.length(); k++) {
 					if (text2.charAt(k) == ch) {
-						numCh--;
+						statistics--;
 					}
 				}
 			}
-			if (numCh != 0) {
+			if (statistics != 0) {
 				return false;
 			}
 		}
