@@ -30,7 +30,7 @@ public class PP7 extends ConsoleProgram {
 			if(gerbi) {
 				startingBalance += 1;
 			} else {
-				startingBalance -= 1;
+				startingBalance -= 2;
 				if (startingBalance <= 0) {
 					break;
 				}
