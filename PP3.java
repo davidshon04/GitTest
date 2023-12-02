@@ -10,12 +10,11 @@ import acm.program.ConsoleProgram;
 
 public class PP3 extends ConsoleProgram {
 	public void run() {
-		while(true){
 		String text = readLine("Enter text: ");
 		String correction = correctText(text);
 		println(correction);
 	}
-	}
+
 	private String correctText(String text) {
 		String newText = "";
 		StringTokenizer tok = new StringTokenizer(text);
@@ -30,14 +29,16 @@ public class PP3 extends ConsoleProgram {
 	private String tokenCorrector(String currToken) {
 		String correctedToken = "";
 		if (Character.isLowerCase(currToken.charAt(0))) {
-			correctedToken += Character.toUpperCase(currToken.charAt(0));;
+			correctedToken += Character.toUpperCase(currToken.charAt(0));
+			;
 		} else {
 			correctedToken += currToken.charAt(0);
 		}
-		
+
 		for (int i = 1; i < currToken.length(); i++) {
 			if (Character.isUpperCase(currToken.charAt(i))) {
-				correctedToken += Character.toLowerCase(currToken.charAt(i));;
+				correctedToken += Character.toLowerCase(currToken.charAt(i));
+				;
 			} else {
 				correctedToken += currToken.charAt(i);
 			}
