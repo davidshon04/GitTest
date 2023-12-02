@@ -7,13 +7,27 @@ import acm.program.ConsoleProgram;
 
 public class PP2 extends ConsoleProgram {
 	public void run() {
-//		String text = readLine("Enter text: ");
-//		
-//		for (int i = 0; i < text.length(); i++) {
-//			char ch = text.charAt(i);
-//			if () {
-//				
-//			}
-//		}
+		String text = readLine("Enter text: ");
+		boolean lowerCaseTest = testText(text);
+		println(lowerCaseTest);
+	}
+
+	
+	//	DabcRd
+	private boolean testText(String text) {
+		int ch0 = 1;
+		char ch1 = (char) ch0;
+		char ch2 = ' ';
+		for (int i = 0; i < text.length(); i++) {
+			if (Character.isLowerCase(text.charAt(i))) {
+				ch2 = text.charAt(i);
+				if (ch2 < ch1) {
+					return false;
+				} else {
+					ch1 = ch2;
+				}
+			}
+		}
+		return true;
 	}
 }
