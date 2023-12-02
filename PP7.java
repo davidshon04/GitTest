@@ -19,7 +19,7 @@ public class PP7 extends ConsoleProgram {
 			if(gerbi) {
 				totalCashBalance += 1;
 			} else {
-				totalCashBalance -= 1;
+				totalCashBalance -= 2;
 				if (totalCashBalance == 0) {
 					break;
 				}
