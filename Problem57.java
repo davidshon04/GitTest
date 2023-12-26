@@ -12,6 +12,8 @@ import acm.program.ConsoleProgram;
 public class Problem57 extends ConsoleProgram {
 
 	public void run() {
+		println("This program checks Anagrams:");
+		
 		String str1 = readLine("Enter text1: ");
 		String str2 = readLine("Enter text2: ");
 
