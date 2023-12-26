@@ -19,19 +19,20 @@ public class Problem57 extends ConsoleProgram {
 	}
 
 	private boolean isAnagram(String str1, String str2) {
-		char[] arr1 = createArray(str1);
-		char[] arr2 = createArray(str2);
+		char[] arr1 = createAndSortArray(str1);
+		char[] arr2 = createAndSortArray(str2);
 		if (Arrays.equals(arr1, arr2)) {
 			return true;
 		}
 		return false;
 	}
 
-	private char[] createArray(String str) {
+	private char[] createAndSortArray(String str) {
 		char[] arr = new char[str.length()];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = str.charAt(i);
 		}
+		Arrays.sort(arr);
 		return arr;
 	}
 }
