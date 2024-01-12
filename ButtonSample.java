@@ -13,7 +13,7 @@ public class ButtonSample extends ConsoleProgram {
 		addActionListeners();
 	}
 	
-	public void ActionePerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) {
 		String cmd = e.getActionCommand();
 		if (cmd.equals("Hi")) {
 			println("Hello there");
