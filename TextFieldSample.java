@@ -1,5 +1,6 @@
 import java.awt.event.ActionEvent;
 
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import acm.program.ConsoleProgram;
@@ -10,8 +11,9 @@ public class TextFieldSample extends ConsoleProgram {
 	
 	public void init() {
 		tf = new JTextField(15);
-		tf.addActionListener(this);
+		add(new JLabel("Name"), SOUTH);
 		add(tf, SOUTH);
+		tf.addActionListener(this);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
