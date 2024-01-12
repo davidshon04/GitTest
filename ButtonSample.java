@@ -7,6 +7,8 @@ import acm.program.ConsoleProgram;
 public class ButtonSample extends ConsoleProgram {
 	
 	public void init() {
+		setFont("London");
+		
 		JButton but = new JButton("Hi");
 		add(but, SOUTH);
 		addActionListeners();
