@@ -7,8 +7,7 @@ import acm.program.ConsoleProgram;
 public class ButtonSample extends ConsoleProgram {
 	
 	public void init() {
-		JButton but = new JButton("Hi");
-		add(but, SOUTH);
+		add(new JButton("Hi"), SOUTH);
 		addActionListeners();
 	}
 	
