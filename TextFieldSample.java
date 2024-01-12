@@ -16,7 +16,7 @@ public class TextFieldSample extends ConsoleProgram {
 	
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == tf) {
-			println("Hello" + tf.getText());
+			println("Hello " + tf.getText());
 		}
 	}
 }
