@@ -11,7 +11,7 @@ import acm.program.ConsoleProgram;
 public class Problem58 extends ConsoleProgram {
 
 	private static final int N = 3;
-	private int[][] matrix = new int[N][N];
+	private int[][] matrix = new int[N][N+1];
 
 	public void run() {
 		fillMatrix(matrix);
