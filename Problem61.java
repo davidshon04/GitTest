@@ -4,7 +4,7 @@ import acm.program.ConsoleProgram;
 //შეყვანილი რიცხვებიდან წყვილი რომელთა ჯამი არის m.
 
 public class Problem61 extends ConsoleProgram {
-	
+
 	public void run() {
 		int m = readInt("Enter m: ");
 		int n = readInt("Enter n: ");
@@ -13,27 +13,14 @@ public class Problem61 extends ConsoleProgram {
 			int numbers = readInt("Enter numbers: ");
 			nums[i] = numbers;
 		}
+
 		for (int i = 0; i < n; i++) {
-			for (int j = i+1; j < n; j++) {
+			for (int j = i + 1; j < n; j++) {
 				if (nums[i] + nums[j] == m) {
 					println(nums[i] + " + " + nums[j] + " = " + m);
-				} 
+				}
 			}
 		}
-		
-		//findCouple(m, n, nums);
 	}
 
-//	private void findCouple(int m, int n, int[] nums) {
-//		for (int i = 0; i < n; i++) {
-//			for (int j = i+1; j < n; j++) {
-//				if (nums[i] + nums[j] == m) {
-//					println(nums[i] + " + " + nums[j] + " = " + m);
-//				} else {
-//					println("No such numbers");
-//				}
-//			}
-//		}
-//		
-//	}
 }
