@@ -1,5 +1,6 @@
 import java.awt.event.ActionEvent;
 
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import acm.graphics.GImage;
@@ -18,6 +19,7 @@ public class Problem67 extends GraphicsProgram {
 	
 	public void init() {
 		tf = new JTextField(20);
+		add(new JLabel("Enter text"), SOUTH);
 		add(tf, SOUTH);
 		tf.addActionListener(this);
 	}
