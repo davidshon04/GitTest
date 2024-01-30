@@ -19,7 +19,7 @@ public class Problem68 extends GraphicsProgram {
 	private JButton but;
 	private static final String BUT_COMMAND = "Enter";
 	private static final int DIFF = 30;
-	private int currY = 0;
+	private int currY = 15;
 	private static final int X = 15;
 	
 	public void init() {
