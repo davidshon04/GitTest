@@ -18,7 +18,7 @@ public class Problem67 extends GraphicsProgram {
 	private JTextField tf;
 	
 	public void init() {
-		tf = new JTextField(20);
+		tf = new JTextField(15);
 		add(new JLabel("Enter text"), SOUTH);
 		add(tf, SOUTH);
 		tf.addActionListener(this);
