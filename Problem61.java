@@ -17,9 +17,7 @@ public class Problem61 extends ConsoleProgram {
 			for (int j = i+1; j < n; j++) {
 				if (nums[i] + nums[j] == m) {
 					println(nums[i] + " + " + nums[j] + " = " + m);
-				} else {
-					println("No such numbers");
-				}
+				} 
 			}
 		}
 		
