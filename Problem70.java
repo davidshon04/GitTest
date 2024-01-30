@@ -15,6 +15,7 @@ public class Problem70 extends GraphicsProgram implements ComponentListener {
 	public void init() {
 		drawRows();
 		drawColumns();
+		addComponentListener(this);
 	}
 
 	private void drawColumns() {
