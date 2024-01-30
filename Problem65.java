@@ -44,5 +44,18 @@ public class Problem65 extends ConsoleProgram {
 			}
 		}
 		println(friendsFrequency);
+		println("The most friendly person is: " + getMostFriendlyPerson(friendsFrequency));
+	}
+
+	private String getMostFriendlyPerson(HashMap<String, Integer> friendsFrequency) {
+		String friendlyPerson = "";
+		int frequency = 0;
+		for (String person: friendsFrequency.keySet()) {
+			if (friendsFrequency.get(person) > frequency) {
+				frequency = friendsFrequency.get(person);
+				friendlyPerson = person;
+			}
+		}
+		return friendlyPerson;
 	}
 }
