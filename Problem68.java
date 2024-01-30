@@ -37,12 +37,12 @@ public class Problem68 extends GraphicsProgram {
 		if (e.getActionCommand().equals(BUT_COMMAND) && !tf.getText().equals("")) {
 			displayOnCanvas(tf.getText(), currY);
 			currY += DIFF;
-			tf.removeAll();
+			tf.setText("");
 		}
 	}
 
 	private void displayOnCanvas(String text, int currY2) {
-		GLabel label = new GLabel(text);
+		GLabel label = new GLabel("- " + text);
 		add(label, X, currY2);
 	}
 }
