@@ -30,7 +30,7 @@ public class Problem59 extends ConsoleProgram {
 			{1,1,0,1,1,0,1}
 		};
 		
-		checkRects(matrix);
+		println(checkRects(matrix));
 	}
 
 	private int checkRects(int[][] matrix2) {
