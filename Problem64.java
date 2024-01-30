@@ -34,8 +34,7 @@ public class Problem64 extends ConsoleProgram {
 		println("");
 		println("Here is the list:");
 		for (String person: friendsMap.keySet()) {
-			println(person + ": " + friendsMap.get(person).toString());
-			
+			println(person + ": " + friendsMap.get(person));
 		}
 	}
 }
