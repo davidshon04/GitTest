@@ -27,7 +27,7 @@ public class SchoolTest extends ConsoleProgram {
 		school.addPupil("Dato", "History");
 		
 		println("Dato: " + school.getTeachers("Dato"));
-		println("Tsiala:" + school.getPupils("Tsiala"));
+	//	println("Tsiala:" + school.getPupils("Tsiala"));
 		
 
 	}
