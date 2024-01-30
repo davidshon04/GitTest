@@ -34,7 +34,7 @@ public class Problem68 extends GraphicsProgram {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand().equals(BUT_COMMAND) && !tf.getText().equals("")) {
+		if ((e.getActionCommand().equals(BUT_COMMAND) || e.getSource() == tf) && !tf.getText().equals("")) {
 			displayOnCanvas(tf.getText(), currY);
 			currY += DIFF;
 			tf.setText("");
