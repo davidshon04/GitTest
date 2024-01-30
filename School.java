@@ -64,8 +64,11 @@ public class School {
 			ArrayList<String> teachersList = new ArrayList<String>();
 			for (String subjects: subjList) {
 				//subjectsTeachers.get(subjects);
-				for (String teachOneSubj: subjectsTeachers.get(subjects)) {
-					teachersList.add(teachOneSubj);
+//				for (String teachOneSubj: subjectsTeachers.get(subjects)) {
+//					teachersList.add(teachOneSubj);
+//				}
+				if (subjectsTeachers.containsKey(subjects)) {
+					teachersList.addAll(subjectsTeachers.get(subjects)); // TODO test on addAll(null);
 				}
 			}
 			return teachersList.iterator();
@@ -79,8 +82,11 @@ public class School {
 			ArrayList<String> studentsList = new ArrayList<String>();
 			for (String subjects: subjList) {
 				//subjectsTeachers.get(subjects);
-				for (String studOneSubj: subjectsStudents.get(subjects)) {
-					studentsList.add(studOneSubj);
+//				for (String studOneSubj: subjectsStudents.get(subjects)) {
+//					studentsList.add(studOneSubj);
+//				}
+				if (subjectsStudents.containsKey(subjects)) {
+					studentsList.addAll(subjectsStudents.get(subjects));
 				}
 			}
 			return studentsList.iterator();
