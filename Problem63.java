@@ -34,5 +34,18 @@ public class Problem63 extends ConsoleProgram {
 			friendsMap.put(person, currFriends);
 		}
 		println(friendsMap);
+		println("Person with the most friends is: " + getMostPopularPerson(friendsMap));
+	}
+
+	private String getMostPopularPerson(HashMap<String, ArrayList<String>> friendsMap) {
+		String popularPerson = "";
+		int numFriends = 0;
+		for (String person: friendsMap.keySet()) {
+			if (friendsMap.get(person).size() > numFriends) {
+				numFriends = friendsMap.get(person).size();
+				popularPerson = person;
+			}
+		}
+		return popularPerson;
 	}
 }
