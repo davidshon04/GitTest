@@ -24,7 +24,7 @@ public class Problem59 extends ConsoleProgram {
 	public void run() {
 		int[][] matrix = new int[][] {
 			{0,1,1,1,0,0,0},
-			{1,1,0,0,1,1,0},
+			{1,1,0,1,1,1,0},
 			{1,1,0,1,1,0,1},
 			{0,0,1,1,1,1,0},
 			{1,1,0,1,1,0,1}
