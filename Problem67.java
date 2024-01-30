@@ -12,8 +12,8 @@ import acm.program.GraphicsProgram;
 
 public class Problem67 extends GraphicsProgram {
 	
-	private static final double IMAGE_WIDTH = 100.0;
-	private static final double IMAGE_HEIGHT = 80.0;
+	private static final double IMAGE_WIDTH = 300.0;
+	private static final double IMAGE_HEIGHT = 200.0;
 	private JTextField tf;
 	
 	public void init() {
