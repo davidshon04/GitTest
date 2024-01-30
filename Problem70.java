@@ -19,7 +19,7 @@ public class Problem70 extends GraphicsProgram implements ComponentListener {
 
 	private void drawColumns() {
 		for(int j = 0; j < N_Columns; j++){
-			double xCoord = (double) getWidth() / N_Columns;
+			double xCoord = getWidth() / (double) N_Columns;
 			GLine columnLine = new GLine((double) xCoord * j, 0, (double) xCoord * j, getHeight());
 			add(columnLine);
 		}
@@ -27,7 +27,7 @@ public class Problem70 extends GraphicsProgram implements ComponentListener {
 
 	private void drawRows() {
 		for(int i = 0; i < N_Rows; i++){
-			double yCoord = (double) getHeight() / N_Rows;
+			double yCoord = getHeight() / (double) N_Rows;
 			GLine rowLine = new GLine(0, (double) yCoord * i, (double) getWidth(), yCoord * i);
 			add(rowLine);
 		}
