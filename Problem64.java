@@ -31,8 +31,11 @@ public class Problem64 extends ConsoleProgram {
 			friendsMap.put(person, currFriends);
 		}
 		
+		println("");
+		println("Here is the list:");
 		for (String person: friendsMap.keySet()) {
 			println(person + ": " + friendsMap.get(person));
+			
 		}
 	}
 }
