@@ -25,7 +25,7 @@ public class Problem68 extends GraphicsProgram {
 	public void init() {
 		tf = new JTextField(20);
 		add(tf, SOUTH);
-	//	tf.addActionListener(this);
+		tf.addActionListener(this);
 		
 		but = new JButton(BUT_COMMAND);
 		add(but, SOUTH);
