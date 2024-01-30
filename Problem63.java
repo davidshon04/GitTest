@@ -32,7 +32,7 @@ public class Problem63 extends ConsoleProgram {
 			}
 			
 			friendsMap.put(person, currFriends);
-			println(friendsMap);
 		}
+		println(friendsMap);
 	}
 }
