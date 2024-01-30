@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 
@@ -9,9 +10,16 @@ public class ComponentListenerSample extends GraphicsProgram implements Componen
 	private GOval oval;
 
 	public void init() {
-		oval = new GOval(getWidth() / 2, getHeight() / 2);
-		add(oval, getWidth() / 4, getHeight() / 4);
+		oval = addOval();
 		addComponentListener(this);
+	}
+
+	private GOval addOval() {
+		oval = new GOval(getWidth() / 2, getHeight() / 2);
+		oval.setFilled(true);
+		oval.setColor(Color.ORANGE);
+		add(oval, getWidth() / 4, getHeight() / 4);
+		return oval;
 	}
 
 	@Override
@@ -29,8 +37,7 @@ public class ComponentListenerSample extends GraphicsProgram implements Componen
 	@Override
 	public void componentResized(ComponentEvent e) {
 		removeAll();
-		oval = new GOval(getWidth() / 2, getHeight() / 2);
-		add(oval, getWidth() / 4, getHeight() / 4);
+		addOval();
 	}
 
 	@Override
