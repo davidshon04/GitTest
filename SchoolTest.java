@@ -41,6 +41,9 @@ public class SchoolTest extends ConsoleProgram {
 
 	private String toString(Iterator<String> teachers) {
 		String res = "[ ";
+		if (teachers == null) {
+			return null;
+		}
 		while (teachers.hasNext()) {
 			String str = teachers.next();
 			res += str;
