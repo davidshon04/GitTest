@@ -41,7 +41,7 @@ public class SchoolTest extends ConsoleProgram {
 			res += str;
 			res += " ";	
 		}
-		res += " ]";
+		res += "]";
 		return res;
 	}
 }
