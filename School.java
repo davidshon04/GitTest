@@ -77,7 +77,7 @@ public class School {
 		if (teachersSubjects.containsKey(teacher)) {
 			teachersSubjects.get(teacher);
 			for (String subj: teachersSubjects.get(teacher)) {
-				subjectsTeachers.remove(subj, teacher);
+				subjectsTeachers.get(subj).remove(teacher);
 			}
 			teachersSubjects.remove(teacher);
 		}
