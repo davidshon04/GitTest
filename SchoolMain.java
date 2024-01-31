@@ -30,5 +30,22 @@ public class SchoolMain extends ConsoleProgram {
 		add(new JLabel("Pupil:"), SOUTH);
 		add(pupil, SOUTH);
 		pupil.addActionListener(this);
+		
+		addTeach = new JButton("Add Teach");
+		add(addTeach, SOUTH);
+		
+		addSubj = new JButton("Add Subj");
+		add(addSubj, SOUTH);
+		
+		addPupil = new JButton("Add Pupil");
+		add(addPupil, SOUTH);
+		
+		displayPupils = new JButton("Display Pupils");
+		add(displayPupils, SOUTH);
+		
+		displayTeachers = new JButton("Display Teachers");
+		add(displayTeachers, SOUTH);
+		
+		addActionListeners();
 	}
 }
