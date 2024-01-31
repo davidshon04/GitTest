@@ -16,17 +16,17 @@ public class SchoolMain extends ConsoleProgram {
 	private JButton displayTeachers;
 	
 	public void init() {
-		teach = new JTextField(10);
+		teach = new JTextField(6);
 		add(new JLabel("Teach:"), SOUTH);
 		add(teach, SOUTH);
 		teach.addActionListener(this);
 		
-		subj = new JTextField(10);
+		subj = new JTextField(6);
 		add(new JLabel("Subj:"), SOUTH);
 		add(subj, SOUTH);
 		subj.addActionListener(this);
 		
-		pupil = new JTextField(10);
+		pupil = new JTextField(6);
 		add(new JLabel("Pupil:"), SOUTH);
 		add(pupil, SOUTH);
 		pupil.addActionListener(this);
