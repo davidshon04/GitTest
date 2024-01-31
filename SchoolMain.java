@@ -5,9 +5,9 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import acm.program.ConsoleProgram;
+import acm.program.Program;
 
-public class SchoolMain extends ConsoleProgram {
+public class SchoolMain extends Program {
 
 	private JTextField teach;
 	private JTextField subj;
@@ -19,7 +19,12 @@ public class SchoolMain extends ConsoleProgram {
 	private JButton displayTeachers;
 	School school = new School();
 	
+	private SchoolGraphics canvas;
+	
 	public void init() {
+		canvas = new SchoolGraphics();
+		add(canvas);
+		
 		teach = new JTextField(6);
 		add(new JLabel("Teach:"), SOUTH);
 		add(teach, SOUTH);
@@ -53,28 +58,35 @@ public class SchoolMain extends ConsoleProgram {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == addTeach && !teach.getText().equals("")) {
 			school.addTeacher(teach.getText());
+			teach.setText("");
 		} else if (e.getSource() == addSubj && !teach.getText().equals("") && !subj.getText().equals("")) {
 			school.addSubject(teach.getText(), subj.getText());
+			teach.setText("");
+			subj.setText("");
 		} else if (e.getSource() == addPupil && !pupil.getText().equals("") && !subj.getText().equals("")) {
 			school.addPupil(pupil.getText(), subj.getText());
+			pupil.setText("");
+			subj.setText("");
 		} else if (e.getSource() == displayPupils && !teach.getText().equals("")) {
-			println(toString(school.getPupils(teach.getText())));
+			canvas.displayOnCanvas(school.getPupils(teach.getText()));
+			teach.setText("");
 		} else if (e.getSource() == displayTeachers && !pupil.getText().equals("")) {
-			println(toString(school.getTeachers(pupil.getText())));
+			canvas.displayOnCanvas(school.getTeachers(pupil.getText()));
+			pupil.setText("");
 		}
 	}
 	
-	private String toString(Iterator<String> teachers) {
-		String res = "[ ";
-		if (teachers == null) {
-			return null;
-		}
-		while (teachers.hasNext()) {
-			String str = teachers.next();
-			res += str;
-			res += " ";	
-		}
-		res += "]";
-		return res;
-	}
+//	private String toString(Iterator<String> teachers) {
+//		String res = "[ ";
+//		if (teachers == null) {
+//			return null;
+//		}
+//		while (teachers.hasNext()) {
+//			String str = teachers.next();
+//			res += str;
+//			res += " ";	
+//		}
+//		res += "]";
+//		return res;
+//	}
 }
