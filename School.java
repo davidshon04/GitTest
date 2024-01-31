@@ -73,7 +73,9 @@ public class School {
 		return null;
 	}
 	
-//	public void removeTeacher(String teacher) {
-//		
-//	}
+	public void removeTeacher(String teacher) {
+		if (teachersSubjects.containsKey(teacher)) {
+			teachersSubjects.remove(teacher);
+		}
+	}
 }
