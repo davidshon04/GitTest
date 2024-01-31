@@ -75,6 +75,10 @@ public class School {
 	
 	public void removeTeacher(String teacher) {
 		if (teachersSubjects.containsKey(teacher)) {
+			teachersSubjects.get(teacher);
+			for (String subj: teachersSubjects.get(teacher)) {
+				subjectsTeachers.remove(subj, teacher);
+			}
 			teachersSubjects.remove(teacher);
 		}
 	}
