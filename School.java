@@ -44,7 +44,7 @@ public class School {
 	}
 	
 	public Iterator<String> getTeachers(String pupil) {
-		ArrayList<String> teachers = new ArrayList<>();
+		HashSet<String> teachers = new HashSet<>();
 		if (studentsSubjects.containsKey(pupil)) {
 			HashSet<String> subjects = studentsSubjects.get(pupil);
 			for (String subj: subjects) {
@@ -59,7 +59,7 @@ public class School {
 	}
 	
 	public Iterator<String> getPupils(String teacher) {
-		ArrayList<String> students = new ArrayList<>();
+		HashSet<String> students = new HashSet<>();
 		if (teachersSubjects.containsKey(teacher)) {
 			HashSet<String> subjects = teachersSubjects.get(teacher);
 			for (String subj: subjects) {
