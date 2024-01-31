@@ -1,3 +1,5 @@
+import java.awt.event.ActionEvent;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -14,22 +16,20 @@ public class SchoolMain extends ConsoleProgram {
 	private JButton addPupil;
 	private JButton displayPupils;
 	private JButton displayTeachers;
+	School school = new School();
 	
 	public void init() {
 		teach = new JTextField(6);
 		add(new JLabel("Teach:"), SOUTH);
 		add(teach, SOUTH);
-		teach.addActionListener(this);
 		
 		subj = new JTextField(6);
 		add(new JLabel("Subj:"), SOUTH);
 		add(subj, SOUTH);
-		subj.addActionListener(this);
 		
 		pupil = new JTextField(6);
 		add(new JLabel("Pupil:"), SOUTH);
 		add(pupil, SOUTH);
-		pupil.addActionListener(this);
 		
 		addTeach = new JButton("Add Teach");
 		add(addTeach, SOUTH);
@@ -47,5 +47,19 @@ public class SchoolMain extends ConsoleProgram {
 		add(displayTeachers, SOUTH);
 		
 		addActionListeners();
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == addTeach && !teach.getText().equals("")) {
+			school.addTeacher(teach.getText());
+		} else if (e.getSource() == addSubj && !teach.getText().equals("") && !subj.getText().equals("")) {
+			school.addSubject(teach.getText(), subj.getText());
+		} else if (e.getSource() == addPupil && !pupil.getText().equals("") && !subj.getText().equals("")) {
+			school.addPupil(pupil.getText(), subj.getText());
+		} else if (e.getSource() == displayPupils && !teach.getText().equals("")) {
+			println(school.getPupils(teach.getText()));
+		} else if (e.getSource() == displayTeachers && !pupil.getText().equals("")) {
+			println(school.getTeachers(pupil.getText()));
+		}
 	}
 }
