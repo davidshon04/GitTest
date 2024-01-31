@@ -1,4 +1,5 @@
 import java.awt.event.ActionEvent;
+import java.util.Iterator;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -57,9 +58,23 @@ public class SchoolMain extends ConsoleProgram {
 		} else if (e.getSource() == addPupil && !pupil.getText().equals("") && !subj.getText().equals("")) {
 			school.addPupil(pupil.getText(), subj.getText());
 		} else if (e.getSource() == displayPupils && !teach.getText().equals("")) {
-			println(school.getPupils(teach.getText()));
+			println(toString(school.getPupils(teach.getText())));
 		} else if (e.getSource() == displayTeachers && !pupil.getText().equals("")) {
-			println(school.getTeachers(pupil.getText()));
+			println(toString(school.getTeachers(pupil.getText())));
 		}
+	}
+	
+	private String toString(Iterator<String> teachers) {
+		String res = "[ ";
+		if (teachers == null) {
+			return null;
+		}
+		while (teachers.hasNext()) {
+			String str = teachers.next();
+			res += str;
+			res += " ";	
+		}
+		res += "]";
+		return res;
 	}
 }
