@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 import acm.program.ConsoleProgram;
 
 public class SchoolTest extends ConsoleProgram {
@@ -26,9 +28,20 @@ public class SchoolTest extends ConsoleProgram {
 		school.addPupil("Gigi", "Art");
 		school.addPupil("Dato", "History");
 		
-		println("Dato: " + school.getTeachers("Dato"));
-		println("Tsiala:" + school.getPupils("Tsiala"));
+		println("Dato: " + toString(school.getTeachers("Dato")));
+		println("Tsiala:" + toString(school.getPupils("Tsiala")));
 		
 
+	}
+
+	private String toString(Iterator<String> teachers) {
+		String res = "[ ";
+		while (teachers.hasNext()) {
+			String str = teachers.next();
+			res += str;
+			res += " ";	
+		}
+		res += " ]";
+		return res;
 	}
 }
