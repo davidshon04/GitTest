@@ -31,6 +31,10 @@ public class SchoolTest extends ConsoleProgram {
 		
 		println("Dato: " + toString(school.getTeachers("Dato")));
 		println("Tsiala:" + toString(school.getPupils("Tsiala")));
+		println("Kristi: " + toString(school.getTeachers("Kristi")));
+		println("Mzeona: " + toString(school.getPupils("Mzeona")));
+		println("Mtvarisa: " + toString(school.getPupils("Mtvarisa")));
+		println("Gigi: " + toString(school.getTeachers("Gigi")));
 		
 
 	}
