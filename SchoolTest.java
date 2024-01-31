@@ -11,6 +11,7 @@ public class SchoolTest extends ConsoleProgram {
 		school.addTeacher("Dali");
 		school.addTeacher("Zamira");
 		school.addTeacher("Jilda");
+		school.addTeacher("Mzeona");
 		
 		school.addSubject("Dali", "Georgian");
 		school.addSubject("Jilda", "Georgian");
